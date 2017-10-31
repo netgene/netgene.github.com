@@ -33,12 +33,13 @@ layout: default
         <br><br>
       </article>
 
+      <hr>
       <nav class="post-pagination">
         {% if page.previous %}
-        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn previous" title="{{ page.previous.title }}">Prev:{{ page.previous.title }}</a>
+        <a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">Prev:{{ page.previous.title }}</a>
         {% endif %}
         {% if page.next %}
-        <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn next" title="{{ page.next.title }}">Next:{{ page.next.title }}</a>
+        <a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next:{{ page.next.title }}</a>
         {% endif %}
       </nav>
 

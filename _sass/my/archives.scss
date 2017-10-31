@@ -1,18 +1,18 @@
 /*---------------------- tags & categories ------------------------*/
 
 .archive-cloud a {
-    background-color: rgba(106,159,181,0.15);
+    background-color: rgba(248, 248, 248,1);
     margin: 5px;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    color: #6a9fb5;
+    color: #777;
 }
 
 .archive-cloud a:hover,
 .archive-cloud a:focus {
-    background-color: #008080;
+    background-color: #777;
     color: #fff;
     opacity: 0.7;
 }
