@@ -11,14 +11,14 @@ layout: default
         <div class="post-info">
           <span class="post-date">{{ page.date | date_to_string }}</span>
           {% if page.categories.size > 0 %} | 
-            <span class="fa fa-folder-open" aria-hidden="true">
+            <span class="fa" aria-hidden="true">
             {% for category in page.categories %}
               <a class="post-categories" href="{{ site.baseurl }}/categories.html#{{ category }}">{{ category }}</a>
             {% endfor %}
             </span>
           {% endif %}
           {% if page.tags.size > 0 %} | 
-            <span class="fa fa-tag" aria-hidden="true">
+            <span class="fa" aria-hidden="true">
             {% for tag in page.tags %}
               <a class="post-tags" href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}</a>
             {% endfor %}
