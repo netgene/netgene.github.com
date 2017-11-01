@@ -23,6 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
   
 # Markdown Processors
 markdown: kramdown
+highlighter: rouge
 
 plugins:
   - jekyll-paginate
