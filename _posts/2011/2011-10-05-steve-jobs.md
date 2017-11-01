@@ -7,7 +7,7 @@ categories:
 tags:
 ---
 
-![Steve Jobs](https://upload.wikimedia.org/wikipedia/commons/e/e5/Steve_Jobs_WWDC07.jpg)
+![Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs#/media/File:Steve_Jobs_Headshot_2010-CROP.jpg)
 
 source from [https://en.wikipedia.org/wiki/Steve_Jobs](https://en.wikipedia.org/wiki/Steve_Jobs):
 
