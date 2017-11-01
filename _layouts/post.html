@@ -35,12 +35,12 @@ layout: default
 
       <hr>
       <nav class="post-pagination">
-        {% if page.previous %}
-        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="next" title="{{ page.previous.title }}">Next:{{ page.previous.title }}</a>
-        {% endif %}
         {% if page.next %}
         <a href="{{ site.baseurl }}{{ page.next.url }}" class="previous" title="{{ page.next.title }}">Prev:{{ page.next.title }}</a>
         {% endif %}
+        {% if page.previous %}
+        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="next" title="{{ page.previous.title }}">Next:{{ page.previous.title }}</a>
+        {% endif %}        
       </nav>
 
       <!--
