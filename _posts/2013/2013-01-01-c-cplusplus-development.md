@@ -36,6 +36,8 @@ C语言之所以命名为C，是因为 C语言源自Ken Thompson发明的B语言
 
 C语言继续发展，在1982年，很多有识之士和美国国家标准协会为了使这个语言健康地发展下去，决定成立C标准委员会，建立C语言的标准。委员会由硬件厂商，编译器及其他软件工具生产商，软件设计师，顾问，学术界人士，C语言作者和应用程序员组成。1989年，ANSI发布了第一个完整的C语言标准——ANSI X3.159—1989，简称“C89”，不过人们也习惯称其为“ANSI C”。C89在1990年被国际标准组织ISO(International Organization for Standardization)一字不改地采纳，ISO官方给予的名称为：ISO/IEC 9899，所以ISO/IEC9899: 1990也通常被简称为“C90”。1999年，在做了一些必要的修正和完善后，ISO发布了新的C语言标准，命名为ISO/IEC 9899：1999，简称“C99”。 在2011年12月8日，ISO又正式发布了新的标准，称为ISO/IEC9899: 2011，简称为“C11”。
 
+![summary-c-all-versions_thumb](https://www.crifan.com/files/pic/uploads/2013/10/summary-c-all-versions_thumb.png)
+
 C语言标准：
 
 K&R C
