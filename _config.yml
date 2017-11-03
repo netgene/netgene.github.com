@@ -24,7 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 highlighter: rouge
 # Markdown Processors
 markdown: kramdown
-  syntax_highlighter: rouge
+    syntax_highlighter: rouge
 
 plugins:
   - jekyll-paginate
