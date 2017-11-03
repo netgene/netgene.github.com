@@ -26,7 +26,7 @@ http://www.cppblog.com/weiym/archive/2012/08/28/188515.html
 
 http://blog.csdn.net/xie1xiao1jun/article/details/8262902
 
-```
+{% highlight c++ %}
 #include <iostream>
 #include <vector>
 #include <stdio.h>
@@ -223,4 +223,4 @@ int main(int argc, char* argv[])
     return 0;  
 }  
 
-```
+{% endhighlight %}

@@ -13,7 +13,7 @@ Tinyhttpd是一个非常轻量级的http sever。代码不超过一千行,但是
 
 #### 源码 
 
-```c
+{% highlight c %}
 /* J. David's webserver */
 /* This is a simple webserver.
  * Created November 1999 by J. David Blackstone.
@@ -530,4 +530,4 @@ int main(void)
 
     return(0);
 }
-```
+{% endhighlight %}

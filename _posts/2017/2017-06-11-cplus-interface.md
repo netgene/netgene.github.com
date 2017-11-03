@@ -9,7 +9,7 @@ tags:
 
 pimpl interface
 
-```c++
+{% highlight c++ %}
 //from cloudwu
 class object {
 	struct imp;
@@ -54,4 +54,4 @@ int main() {
 	obj->release();
 	return 0;
 }
-```
+{% endhighlight %}

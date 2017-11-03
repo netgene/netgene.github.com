@@ -14,7 +14,7 @@ tags:
 ./example_echosvr 127.0.0.1 8889 1 1
 ```
 
-``` c++
+{% highlight c++ %}
 #include "co_routine.h"
 
 #include <stdio.h>
@@ -279,10 +279,7 @@ int main(int argc,char *argv[])
 
 	return 0;
 }
-
-
-
-```
+{% endhighlight %}
 
 客户端连接测试例子
 
@@ -290,7 +287,7 @@ int main(int argc,char *argv[])
 ./client.pl 127.0.0.1 8889
 ```
 
-``` perl
+{% highlight perl %}
 #!/usr/bin/perl -w 
 use strict; 
 use IO::Socket; 
@@ -315,7 +312,7 @@ main:
     }
     close $sock;
 }
-```
+{% endhighlight %}
 
 日志
 
