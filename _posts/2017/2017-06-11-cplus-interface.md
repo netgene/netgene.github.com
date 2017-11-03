@@ -9,9 +9,6 @@ tags:
 
 pimpl interface
 
-
-<!-- more -->
-
 ```c++
 //from cloudwu
 class object {

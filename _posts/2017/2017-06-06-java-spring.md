@@ -19,8 +19,6 @@ java:
 - SSH spring springMVC Hibernate
 - SSM spring springMVC Mybatis
 
-<!-- more -->
-
 为了降低Java开发的复杂性，Spring采取了以下4种关键策略：
 - 基于POJO的轻量级和最小侵入性编程；
 - 通过依赖注入和面向接口实现松耦合； -- 装配wiring

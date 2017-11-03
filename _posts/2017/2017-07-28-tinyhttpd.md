@@ -7,12 +7,11 @@ categories:
 tags:
 ---
 
-[https://github.com/EZLippi/Tinyhttpd](https://github.com/EZLippi/Tinyhttpd)
 Tinyhttpd是一个非常轻量级的http sever。代码不超过一千行,但是麻雀虽小,五脏俱全。
 
-<!-- more -->
+[https://github.com/EZLippi/Tinyhttpd](https://github.com/EZLippi/Tinyhttpd)
 
-## 源码 
+#### 源码 
 
 ```c
 /* J. David's webserver */
