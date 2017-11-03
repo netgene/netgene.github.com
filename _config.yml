@@ -28,6 +28,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
     use_coderay: true
+    extensions: ["fenced_code_blocks", "footnotes", "smart", hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
 
 plugins:
   - jekyll-paginate
