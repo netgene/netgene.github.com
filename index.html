@@ -86,7 +86,7 @@ title: Home
             <span>&laquo;</span>
         {% else %}
             {% if paginator.previous_page == 1 %}
-            <a href="{{ site.baseurl}}/">
+            <a href="{{ site.baseurl}}/pages1">
             {% else %}
             <a href="{{ site.baseurl}}/pages{{ paginator.previous_page }}">
             {% endif %}
@@ -101,7 +101,7 @@ title: Home
         <li>
             {% endif %}
             {% if i == 1 %}
-            <a href="{{ site.baseurl}}/">
+            <a href="{{site.baseurl}}/pages1">{{i}}</a>
             {% else %}
             <a href="{{site.baseurl}}/pages{{i}}">{{i}}</a>
             {% endif %}
@@ -117,7 +117,7 @@ title: Home
             {% endif %}
         </li>
         <li>
-            <a href="{{ site.baseurl}}/pages{{paginator.total_pages}}">
+            <a href="{{ site.baseurl}}/page{{paginator.total_pages}}">
                 <span>末页</span>
             </a>
         </li>
