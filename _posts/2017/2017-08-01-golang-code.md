@@ -37,6 +37,10 @@ func main() {
 }
 {% endhighlight %}
 
+### 类守护进程
+
+用supervisor来监控。
+
 ## 架构模式
 
 ### 生产者与消费者
