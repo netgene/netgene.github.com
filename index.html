@@ -77,7 +77,7 @@ title: Home
       <nav aria-label="Page navigation">
       <ul class="pagination">
         <li>
-            <a href="{{ site.baseurl}}/article/">
+            <a href="{{ site.baseurl}}">
                 <span>首页</span>
             </a>
         </li>
@@ -86,9 +86,9 @@ title: Home
             <span>&laquo;</span>
         {% else %}
             {% if paginator.previous_page == 1 %}
-            <a href="{{ site.baseurl}}/article/">
+            <a href="{{ site.baseurl}}">
             {% else %}
-            <a href="{{ site.baseurl}}/article/{{ paginator.previous_page }}">
+            <a href="{{ site.baseurl}}/page{{ paginator.previous_page }}">
             {% endif %}
                 <span>&laquo;</span>
             </a>
@@ -101,9 +101,9 @@ title: Home
         <li>
             {% endif %}
             {% if i == 1 %}
-            <a href="{{site.baseurl}}/article">{{i}}</a>
+            <a href="{{site.baseurl}}">{{i}}</a>
             {% else %}
-            <a href="{{site.baseurl}}/article/{{i}}">{{i}}</a>
+            <a href="{{site.baseurl}}/page{{i}}">{{i}}</a>
             {% endif %}
         </li>
         {% endfor %}
@@ -111,18 +111,18 @@ title: Home
             {% if paginator.page == paginator.total_pages %}
             <span>&raquo;</span>
             {% else %}
-            <a href="{{ site.baseurl}}/article/{{ paginator.next_page }}">
+            <a href="{{ site.baseurl}}/page{{ paginator.next_page }}">
                 <span>&raquo;</span>
             </a>
             {% endif %}
         </li>
         <li>
-            <a href="{{ site.baseurl}}/article/{{paginator.total_pages}}">
+            <a href="{{ site.baseurl}}/page{{paginator.total_pages}}">
                 <span>末页</span>
             </a>
         </li>
         <li class="disabled">
-            <span>第{{paginator.page}}页 / 共{{paginator.total_pages}}页</span>
+            <span>{{paginator.page}} / {{paginator.total_pages}}页</span>
         </li>
       </ul>
       </nav>
