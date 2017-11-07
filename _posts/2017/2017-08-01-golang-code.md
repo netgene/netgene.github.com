@@ -14,10 +14,10 @@ tags:
 
 {% highlight golang %}
 func main() {
-	logger.Info("program start.PID[", os.Getpid(), "]")
+    logger.Info("program start.PID[", os.Getpid(), "]")
 
-	//signals
-	sigs := make(chan os.Signal, 1)
+    //signals
+    sigs := make(chan os.Signal, 1)
     signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
     go func() {
         sig := <- sigs;
@@ -27,13 +27,13 @@ func main() {
 
     //mainloop
 
-	//mygod! think goroutines close.
-	//if main goroutine exit, all goroutines will exit.
-	for !exit {
-		time.Sleep(1 * time.Second)
-	}
+    //mygod! think goroutines close.
+    //if main goroutine exit, all goroutines will exit.
+    for !exit {
+        time.Sleep(1 * time.Second)
+    }
 
-	logger.Info("program exit.")
+    logger.Info("program exit.")
 }
 {% endhighlight %}
 
