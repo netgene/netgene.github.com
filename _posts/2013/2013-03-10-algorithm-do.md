@@ -23,7 +23,7 @@ void print(int a[], int n)
   printf("\n");
 }
 
-int deldup(int *a, int n)
+int deldup(int a[], int n)
 {
   int i;
   int index = 0;
