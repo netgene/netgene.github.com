@@ -44,3 +44,59 @@ func main() {
 ## 架构模式
 
 ### 生产者与消费者
+
+## 网络编程
+
+### protobuf
+
+获取 goprotobuf 提供的 Protobuf 编译器插件 protoc-gen-go（被放置于 $GOPATH/bin 下，$GOPATH/bin 应该被加入 PATH 环境变量，以便 protoc 能够找到 protoc-gen-go）
+```
+go get github.com/golang/protobuf/protoc-gen-go
+
+cd github.com/golang/protobuf/protoc-gen-go
+
+go build
+
+go install
+```
+
+获取 goprotobuf 提供的支持库，包含诸如编码（marshaling）、解码（unmarshaling）等功能
+```
+go get github.com/golang/protobuf/proto
+cd github.com/golang/protobuf/proto
+go build
+go install
+```
+
+{% highlight golang%}
+package trademsg;
+
+message Req{
+  required string   SID = 1;
+  required int32    UID = 2;
+}
+{% endhighlight %}
+
+{% highlight golang%}
+package main
+
+import (
+    "github.com/golang/protobuf/proto"
+    "trademsg"
+    "fmt"
+)
+
+func main() {
+    test := &trademsg.Req{
+        SID: proto.String("sid"),
+        UID: proto.Int32(2),
+    }
+
+    data, _ := proto.Marshal(test)
+
+    newTest := &trademsg.Req{}
+    proto.Unmarshal(data, newTest)
+    fmt.Println(newTest.GetSID())
+
+}
+{% endhighlight %}
