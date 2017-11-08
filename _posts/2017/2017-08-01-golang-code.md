@@ -77,6 +77,10 @@ message Req{
 }
 {% endhighlight %}
 
+```
+protoc --go_out=. trade.proto
+```
+
 {% highlight golang%}
 package main
 
@@ -87,16 +91,15 @@ import (
 )
 
 func main() {
-    test := &trademsg.Req{
+    req := &trademsg.Req{
         SID: proto.String("sid"),
         UID: proto.Int32(2),
     }
 
-    data, _ := proto.Marshal(test)
+    data, _ := proto.Marshal(req)
 
-    newTest := &trademsg.Req{}
-    proto.Unmarshal(data, newTest)
-    fmt.Println(newTest.GetSID())
-
+    dumpreq := &trademsg.Req{}
+    proto.Unmarshal(data, dumpreq)
+    fmt.Println(dumpreq.GetSID())
 }
 {% endhighlight %}
