@@ -41,6 +41,10 @@ func main() {
 
 用supervisor来监控。
 
+### goroutine退出思路
+
+
+
 ## 架构模式
 
 ### 生产者与消费者
@@ -103,3 +107,8 @@ func main() {
     fmt.Println(dumpreq.GetSID())
 }
 {% endhighlight %}
+
+### socket 
+
+[Socket](https://studygolang.com/articles/207)
+[Socket Server](http://blog.csdn.net/ahlxt123/article/details/47726783)
