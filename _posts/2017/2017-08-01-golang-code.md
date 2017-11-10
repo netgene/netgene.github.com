@@ -113,3 +113,13 @@ func main() {
 [Socket](https://studygolang.com/articles/207)
 
 [Socket Server](http://blog.csdn.net/ahlxt123/article/details/47726783)
+
+## 缓存
+
+[golang开发缓存组件](http://blog.csdn.net/oaa608868/article/details/53489478)
+
+缓存组件的设计其实挺简单的，主要思路或者设计点如下：
+- 全局struct对象：用来做缓存（基于该struct实现增删改查基本操作）
+- 定时gc功能（其实就是定时删除struct对象中过期的缓存对）：刚好用上golang的ticker外加channel控制实现
+- 支持缓存写文件及从文件读缓存：其实就是将这里的key-value数据通过gob模块进行一次编解码操作
+- 并发读写：上锁（golang支持读写锁，一般使用时在被操作的struct对象里面声明相应的锁，即sync.RWMutex，操作之前先上锁，之后解锁即可）
