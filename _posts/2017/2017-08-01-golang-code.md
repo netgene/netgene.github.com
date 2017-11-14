@@ -53,6 +53,14 @@ func main() {
 
 ### protobuf
 
+根据protobuf消息名，动态实例化protobuf消息。根据 message name 获取到 message type, 然后利用 golang 反射实例化消息结构。
+
+[golang中使用消息名称创建protobuf消息](https://www.cnblogs.com/wertyd/p/7749875.html)
+
+[golang二进制协议接口映射](https://segmentfault.com/a/1190000008471015)
+
+golang种有一个reflect包，可以对类型进行反射，动态生成相应结构体，具体做法就是，将protobuf消息结构通过interface类型和消息id注册到一个自定义map中，在map中保存结构体的类型。然后从底层网络获取到原始二进制协议数据后，通过消息id在map中找到对应的类型信息并动态创建出结构体类型来解析二进制数据。
+
 获取 goprotobuf 提供的 Protobuf 编译器插件 protoc-gen-go（被放置于 $GOPATH/bin 下，$GOPATH/bin 应该被加入 PATH 环境变量，以便 protoc 能够找到 protoc-gen-go）
 ```
 go get github.com/golang/protobuf/protoc-gen-go
@@ -115,6 +123,12 @@ func main() {
 [Socket Server](http://blog.csdn.net/ahlxt123/article/details/47726783)
 
 ## 缓存
+
+beego是基于八大独立的模块(cache,context,config,httplibs,logs,orm,session,toolbox)之上构建的，是一个高度解耦的框架。当初设计beego的时候就是考虑功能模块化，用户即使不适用beego的http逻辑，也是可以在使用这些独立模块，例如你可以使用cache模块来做你的缓存逻辑，使用日志模块来记录你的操作信息，使用config模块来解析你各种格式的文件。
+
+memcached作者Brad Fitzpatrick用Go语言重新实现了memcached，新的项目名称为groupcache，现已在Google多个生产环境中投入使用。
+
+[golang的一个基于内存的key-value 缓存](http://blog.csdn.net/u010471121/article/details/53099401)
 
 [golang开发缓存组件](http://blog.csdn.net/oaa608868/article/details/53489478)
 
