@@ -92,42 +92,81 @@
 }
 
 .post-content {
-    line-height: 1.6;
+    clear: left;
     font-size: 15px;
-
-    blockquote {
-        font-size: 14px;
-        padding: 5px 10px;
-        opacity: .6;
-        border-left: 5px solid #A9A9A9;
+    line-height: 1.77;
+    color: #444;
+    padding-top: 15px;
+    text-align: justify;
+    text-justify: distribute;
+    word-break: break-all;
+    h2 {
+        margin: 1.4em 0 1.1em;
+        border-bottom: 1px solid #eee;
         overflow: hidden;
     }
-    iframe {
-        border: none;
-        max-width: 100%;
-        margin: 0;
+    h3 {
+        margin: 1.4em 0 1.1em;
     }
-    .iframe-container,
-    .iframe-normal-container,
-    .iframe-wide-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        .iframe{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
+    pre code {
+        padding: 0 2em;
+    }
+    p {
+        margin: 0 0 1.234em;
+        code {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 0 5px;
+            background: #f7f8f8;
+        }
+        a {
+            color: #01579f;
+            padding-bottom: 2px;
+            word-break: break-all;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
-    .iframe-container{
-        padding-bottom: 67%;
+    .caption {
+        color: #444;
+        display: block;
+        font-size: 0.9em;
+        margin-top: 0.1em;
+        position: relative;
+        text-align: center;
     }
-    .iframe-normal-container {
-        padding-bottom: 83%;
+    hr {
+        margin: 2.4em auto;
+        border: none;
+        border-top: 1px solid #eee;
+        position: relative;
     }
-    .iframe-wide-container {
-        padding-bottom: 65%;
+    img {
+        max-width: 100%;
+        padding: 0.5em 0;
+        margin: auto;
+        display: block;
+    }
+    ul, ol {
+        border-radius: 3px;
+        margin: 1em 0;
+        ul {
+            margin: 0;
+        }
+        code {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 0px 5px;
+            background: #f7f8f8;
+        }
+        a {
+            color: #01579f;
+            padding-bottom: 2px;
+            word-break: break-all;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
