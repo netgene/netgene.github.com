@@ -106,6 +106,10 @@ pre,code {
     font-size:.92857em;
 }
 
+code {
+    display:inline-block;
+}
+
 h1 {
     font:bold 22px "ff-tisa-web-pro",Cambria,"Times New Roman",Georgia,Times, sans-serif;
 }
@@ -295,7 +299,7 @@ width:800px;
     color:#444;
 }
 .post-content pre, code,.comment-content pre, code{
-    display: inline-block;
+    display: block;
     background:#F8F8F8;
 }
 .post-content p{
