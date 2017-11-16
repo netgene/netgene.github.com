@@ -1,12 +1,17 @@
 ---
 layout: post
-title: Go用映射动态将json转为proto消息
+title: Go用反射动态将json转为proto消息
 date: 2017-09-11 20:20:20
 categories:
 - golang
 - 语言与设计
 tags:
 ---
+
+golang标准库有reflect包，同Java类似具有反射特性。
+
+通过msgType = reflect.TypeOf(msg.(proto.Message))获取proto类型，通过map记录所有要转换的proto。通过eflect.New(info.msgType.Elem()).Interface().(proto.Message)获取相应的proto消息，通过jsonpb.UnmarshalString(msgJson, nmsg)将json映射到对于proto消息上。
+
 
 ```golang
 //gosim.go
@@ -23,9 +28,9 @@ import (
 )
 
 var help = flag.Bool("h", false, "help")
-var msg = flag.String("msg", "CustomerOpenReq", "proto message name")
-var file = flag.String("file", "./msgjson/CustomerOpenReq.json", "json file")
-var ipport = flag.String("ipport", "172.18.18.117:5322", "ip:port")
+var msg = flag.String("msg", "OpenReq", "proto message name")
+var file = flag.String("file", "./msgjson/OpenReq.json", "json file")
+var ipport = flag.String("ipport", "localhost:5322", "ip:port")
 
 func LoadInputFile(filename string) (content string, err error) {
     fileContentBytes, err := ioutil.ReadFile(filename)
