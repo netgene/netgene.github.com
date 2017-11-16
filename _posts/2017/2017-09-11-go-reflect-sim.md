@@ -101,7 +101,6 @@ func main() {
 msgreflect.go 实现反射功能。
 
 ```golang
-//msgreflect.go
 package msgreflect
 
 import (
