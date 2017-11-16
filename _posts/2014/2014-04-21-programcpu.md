@@ -7,15 +7,16 @@ categories:
 tags:
 ---
 
-##系统占用CPU、内存：##
-###top###
+#### 系统占用CPU、内存：
+
+**top**
 
 ```shell
 $  top -b -n 1 |grep wangjun|grep op|awk '{print "cpu:"$9"%","mem:"$10"%"}'
 cpu:2.0% mem:0.0%
 ```
 
-###ps aux###
+**ps aux**
 
 RSS-------------进程实际占用物理内存大小(kb)  
 VSZ--------------任务虚拟地址空间的大小  
@@ -30,7 +31,7 @@ wangjun  15269  0.0  0.0 109404   868 pts/8    S+   11:44   0:00 grep --color=au
 ngboss    9244140  0.5  1.0 4196784 4196796  pts/1 A    11时39分00秒  0:25 qs prov_sz
 ```
 
-###status###
+**status**
 
 ```shell
 $ cat /proc/15330/status
