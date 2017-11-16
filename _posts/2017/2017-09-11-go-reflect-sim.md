@@ -26,6 +26,9 @@ Usage of gosim:
         proto message name (default "OpenReq")
 ```
 
+
+gosim.go 实现程序框架，加载json文件，调用反射组proto包，socket连接服务器发送proto报文。
+
 ```golang
 //gosim.go
 
@@ -94,6 +97,8 @@ func main() {
 }
 ```
 
+msgreflect.go 实现反射功能。
+
 ```golang
 //msgreflect.go
 
@@ -143,6 +148,8 @@ func ParseMessage(msgid uint32, msgJson string) (nmsg proto.Message, err error) 
     }    
 }
 ```
+
+msghandler.go 实现proto消息反射注册。
 
 ```golang
 //msghandler.go
