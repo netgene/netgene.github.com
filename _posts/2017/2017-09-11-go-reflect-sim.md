@@ -8,7 +8,7 @@ categories:
 tags:
 ---
 
-golang标准库有reflect包，同Java类似具有反射特性。
+golang标准库有`reflect`包，同Java类似具有反射特性。
 
 通过msgType = reflect.TypeOf(msg.(proto.Message))获取proto类型，把interface类型和指定消息id注册到一个自定义map中。
 
