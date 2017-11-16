@@ -7,7 +7,7 @@ categories:
 tags:
 ---
 
-![switch](/images/posts/2017-03-04-nintendo-switch-0.jpg)
+![switch](/images/posts/2017-03-04-nintendo-switch-0.jpg)  
 (图片引用来自网络)
 
 **对Switch的小小点评**
@@ -22,14 +22,14 @@ Switch外形小巧、模块化组件可主机掌机随时无缝切换、继承�
 
 对于80后来说，小霸王是喜欢游戏人的共同回忆，小霸王当年是仿任天堂红白机的仿机。Switch在国内还是有市场基础的。至少还是**小小勾起我的购买欲望了，因为我现在有主机需求，非重度玩家，同时弥补下掌机在童年时代的缺失，可以和家里小朋友一起玩玩超级玛丽：）**，为了以后不让品质差的手游毒害小朋友，进行正面的游戏引导，让她有自己的游戏品味还是有必要的，呵呵。毕竟再买个小霸王放客厅就感觉太过时了，用PC模拟连电视也太费劲，不具时代感。小巧有品质的物件应该是有广泛受众的，比如小米小盒子在我眼里也算客厅里一件比较物有所值的物件。国内厂商在游戏领域还是要继续加把劲。
 
-![kidplay](/images/posts/2017-03-04-nintendo-switch-1.jpg)
+![kidplay](/images/posts/2017-03-04-nintendo-switch-1.jpg)  
 (之前在家里用PC模拟器连电视玩超级玛丽，小朋友还挺有兴趣O(∩_∩)O)
 
 
 
 > 注：以下信息大多从网上整理引用，仅供参考。
 
-NS总设计师高桥伸说到，SWITCH融合了历代任天堂游戏机的理念。
+NS总设计师高桥伸说到，SWITCH融合了历代任天堂游戏机的理念。  
 ![game](/images/posts/2017-03-04-nintendo-switch-2.jpg)
 
 [如何评价任天堂新主机 Nintendo Switch？-知乎](https://www.zhihu.com/question/51781964)
