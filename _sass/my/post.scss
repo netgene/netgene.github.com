@@ -302,6 +302,10 @@ width:800px;
     display: block;
     background:#F8F8F8;
 }
+.post-content code,.comment-content code{
+    display:inline-block;
+    background:#F8F8F8;
+}
 .post-content p{
     margin:0 0 1.234em;
 }
