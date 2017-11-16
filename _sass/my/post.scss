@@ -1,12 +1,12 @@
 /*---------------------- posts preview ------------------------*/
 
-.post-preview .post-title a {
+.post-preview a {
     color: #337AB7;
     font-size: 23px;
 }
 
-.post-preview .post-title a:hover,
-.post-preview .post-title a:focus {
+.post-preview  a:hover,
+.post-preview  a:focus {
     color: #337AB7;
 }
 
@@ -254,12 +254,12 @@ width:800px;
 }
 .post-title {
     margin:0;
-    color:#555;
+    color:#337AB7;
     text-align:left;
     font:bold 25px/1.2 "ff-tisa-web-pro",Cambria,"Times New Roman",Georgia,Times, sans-serif;
 }
 .post-title a{
-    color:#555;
+    color:#337AB7;
 }
 .post-meta {
     padding:0;
