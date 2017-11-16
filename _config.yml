@@ -22,11 +22,9 @@ url: http://junwang.me # the base hostname & protocol for your site, e.g. http:/
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Markdown Processors
-highlighter: rouge
 markdown: kramdown
 kramdown:
     input: GFM
-    syntax_highlighter: rouge
     use_coderay: true
     extensions: ["fenced_code_blocks", "footnotes", "smart", hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
 
