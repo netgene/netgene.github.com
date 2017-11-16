@@ -118,10 +118,15 @@ blockquote {
     border-left:4px solid #ddd;
     color:#777;
 }
+
+h1 {
+    font-size: 20px;
+}
+
 h1,h2,h3,h4 {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-input[type="text"],input[type="email"],input[type="url"],input[type="password"] {
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],textarea {
     padding:5px;
     border:1px solid #ddd;
     width:100%;
