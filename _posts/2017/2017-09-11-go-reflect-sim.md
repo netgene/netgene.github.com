@@ -10,7 +10,9 @@ tags:
 
 golang标准库有reflect包，同Java类似具有反射特性。
 
-通过msgType = reflect.TypeOf(msg.(proto.Message))获取proto类型，通过interface类型和指定消息id注册到一个自定义map中。通过reflect.New(info.msgType.Elem()).Interface().(proto.Message)即通过类型的Elem()函数得到指针的基类型，获取相应的proto消息，通过jsonpb.UnmarshalString(msgJson, nmsg)将json映射到对于proto消息上。
+通过msgType = reflect.TypeOf(msg.(proto.Message))获取proto类型，把interface类型和指定消息id注册到一个自定义map中。
+
+使用时通过指定具体的消息id，由reflect.New(info.msgType.Elem()).Interface().(proto.Message)即类型的Elem()函数得到指针的基类型，来获取相应的proto消息，再通过jsonpb.UnmarshalString(msgJson, nmsg)将json映射到对于proto消息上。
 
 gosim启动命令：
 
