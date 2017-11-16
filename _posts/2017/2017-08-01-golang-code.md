@@ -93,7 +93,7 @@ message Req{
 protoc --go_out=. trade.proto
 ```
 
-{% highlight golang%}
+```golang
 package main
 
 import (
@@ -114,7 +114,7 @@ func main() {
     proto.Unmarshal(data, dumpreq)
     fmt.Println(dumpreq.GetSID())
 }
-{% endhighlight %}
+```
 
 ### socket 
 
