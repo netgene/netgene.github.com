@@ -33,7 +33,6 @@ gosim.go 实现程序框架，加载json文件，调用反射组proto包，socke
 
 ```golang
 //gosim.go
-
 package main
 
 import (
@@ -103,7 +102,6 @@ msgreflect.go 实现反射功能。
 
 ```golang
 //msgreflect.go
-
 package msgreflect
 
 import (
