@@ -10,6 +10,10 @@
     color: #337AB7;
 }
 
+.post-info {
+    margin: 10px 0;
+}
+
 .post-info .post-date {
     color: #777;
     font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -67,7 +71,7 @@
 
 /*---------------------- post content ------------------------*/
 
-.post .post-info {
+.post {
     margin-bottom: -10px;
 }
 
@@ -274,7 +278,7 @@ width:800px;
     font-size: 15px;
     line-height: 1.715;
     color:#444;
-    padding-top:25px;
+    padding-top:10px;
 }
 .post-content pre, code,.comment-content pre, code{
     padding:11px 4px;
