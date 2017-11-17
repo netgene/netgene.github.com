@@ -7,11 +7,15 @@ categories:
 tags:
 ---
 
+### 排序类
+
+### 数组处理类
+
 #### 不使用额外空间删除已排序数组重复元素
 
 给定排好序的数组A，大小为n，请给出一个O(n)的算法，删除重复元素，且不能使用额外空间。
 
-{% highlight c++%}
+```c
 #include <stdio.h>
 
 void print(int a[], int n)
@@ -48,4 +52,11 @@ int main()
 
   return 0;
 }
-{% endhighlight %}
+```
+
+### 字符串处理类
+
+### 链表类
+
+### 树
+
