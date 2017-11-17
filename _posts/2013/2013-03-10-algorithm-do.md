@@ -16,6 +16,9 @@ tags:
 给定排好序的数组A，大小为n，请给出一个O(n)的算法，删除重复元素，且不能使用额外空间。
 
 ```c
+/*
+思路：index记录重排位置，从第二个开始遍历，若与index位置值不等，移到index+1，index++。
+*/
 #include <stdio.h>
 
 void print(int a[], int n)
