@@ -63,3 +63,12 @@ int main()
 
 ### 树
 
+- Size Balanced Tree(SBT)
+- 二叉查找树(BST) 查找最好时间复杂度O(logN)，最坏时间复杂度O(N)。
+- 平衡二叉查找树(AVL) 查找的时间复杂度维持在O(logN) ，严格平衡策略以牺牲建立查找结构(插入，删除操作)的代价。
+- 红黑树(RBT)  查找 效率最好情况下时间复杂度为O(logN)，但在最坏情况下比AVL要差一些，但也远远好于BST。
+- Treap 
+
+#### Binary Search Tree 与 Size Balanced Tree 对比
+
+
