@@ -10,8 +10,8 @@ tags:
 
 
 #### dispatcher-worker 模式
-		            	               ╱  worker_goroutine1
-		dispatcher_groutine —— channel ——  worker_goroutine2
-					                   ╲  worker_goroutinen
+                                       ╱  worker_goroutine1
+        dispatcher_groutine —— channel ——  worker_goroutine2
+                                       ╲  worker_goroutinen
 
 
