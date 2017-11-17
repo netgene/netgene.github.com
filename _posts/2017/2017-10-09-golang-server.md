@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Go服务端架构思考
+title: Go并发服务端架构思考
 date: 2017-10-09 20:20:20
 categories:
 - golang
