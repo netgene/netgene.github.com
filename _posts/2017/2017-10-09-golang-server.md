@@ -23,5 +23,5 @@ dispatcher相当于生产者，例如处理socket连接，把解析的报文都�
 同时发起n个rpc调用，通过select监控channel并设置统一的超时时间来控制。
 
                                         ╱  goroutine_rpc_server_1
-        server_goroutine (异步超时等待) ——  goroutine_rpc_server_2
+        server_goroutine(异步超时等待)  ——  goroutine_rpc_server_2
                                         ╲  goroutine_rpc_server_n
