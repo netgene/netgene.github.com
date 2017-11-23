@@ -130,20 +130,20 @@ ser = serial.Serial('/dev/ttyAMA0', 9600)
 ser.setTimeout(1.5)
 
 def get_pm25():
-	while True:
-	    ser.flushInput()
-	    time.sleep(0.5)
-	    result = ser.read(10)
-	
-	    if len(result) == 10:
-	        if(result[0] == 0xaa and result[1] == 0xc0):
-	            checksum = 0
-	            for i in range(6):
-	                checksum = checksum + int(result[2+i])
-	
-	            if checksum % 256 == result[8]:
-	                pm25 = (int(result[3]) * 256 + int(result[2])) / 10.0
-	                print("pm2.5:%.1f" %pm25)
+    while True:
+        ser.flushInput()
+        time.sleep(0.5)
+        result = ser.read(10)
+    
+        if len(result) == 10:
+            if(result[0] == 0xaa and result[1] == 0xc0):
+                checksum = 0
+                for i in range(6):
+                    checksum = checksum + int(result[2+i])
+    
+                if checksum % 256 == result[8]:
+                    pm25 = (int(result[3]) * 256 + int(result[2])) / 10.0
+                    print("pm2.5:%.1f" %pm25)
 
 if __name__ == '__main__':  
 	get_pm25()
