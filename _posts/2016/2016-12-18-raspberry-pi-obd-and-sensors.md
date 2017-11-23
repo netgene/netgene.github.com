@@ -8,7 +8,7 @@ tags:
 - Raspberry Pi
 ---
 
-![Raspberry-Pi-3-Flat-Top](https://en.wikipedia.org/wiki/Raspberry_Pi#/media/File:Raspberry-Pi-3-Flat-Top.jpg)
+![Raspberry-Pi-3-Flat-Top](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Raspberry-Pi-3-Flat-Top.jpg/1280px-Raspberry-Pi-3-Flat-Top.jpg)
 
 ![gpio](https://www.element14.com/community/servlet/JiveServlet/previewBody/68203-102-6-294412/GPIO.png)
 
