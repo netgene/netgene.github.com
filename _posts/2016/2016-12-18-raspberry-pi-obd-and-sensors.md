@@ -28,12 +28,12 @@ tags:
 ```python
 ```
 
-### 温湿度DHT11 Sensor
+### 温湿度DHT11
 
 ```python
 ```
 
-### PM2.5 SDS011 Sensor
+### PM2.5 SDS011
 
 ```python
 ```
