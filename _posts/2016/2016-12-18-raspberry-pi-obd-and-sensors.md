@@ -146,5 +146,5 @@ def get_pm25():
                     print("pm2.5:%.1f" %pm25)
 
 if __name__ == '__main__':  
-	get_pm25()
+    get_pm25()
 ```
