@@ -21,6 +21,15 @@ tags:
 ### OBD
 
 ```python
+from obdython import Device, OBDPort  
+import time  
+dev = Device(Device.types['bluetooth'], bluetooth_mac="AA:BB:CC:11:22:33", bluetooth_channel=1)  
+port = OBDPort(dev)  
+time.sleep(0.1) # Program needs to wait for adapter to come online  
+port.connect()  
+time.sleep(0.1)  
+port.ready()  
+print(port.sensor('rpm'))  
 ```
 
 ### GPS
@@ -108,4 +117,32 @@ GPIO.cleanup()
 ### PM2.5 SDS011
 
 ```python
+# -*- coding: utf-8 -*-
+import serial
+import time
+def hexShow(argv):  
+    result = ''  
+    hLen = len(argv)  
+    for i in xrange(hLen):  
+        hvol = ord(argv[i])  
+        hhex = '%02x'%hvol  
+        result += hhex+' '  
+    print 'hexShow:',result  
+  
+t = serial.Serial('/dev/ttyAMA0',9600)  
+t.setTimeout(1.5)
+while True:
+    t.flushInput()
+    time.sleep(0.5)
+    retstr = t.read(10)
+    hexShow(retstr)
+    if len(retstr)==10:
+        if(retstr[0]==b"\xaa" and retstr[1]==b'\xc0'):
+            checksum=0
+            for i in range(6):
+                checksum=checksum+ord(retstr[2+i])
+            if checksum%256 == ord(retstr[8]):
+                pm25=ord(retstr[2])+ord(retstr[3])*256
+                pm10=ord(retstr[4])+ord(retstr[5])*256
+                print "pm2.5:%.1f pm10 %.1f"%(pm25/10.0,pm10/10.0)
 ```
