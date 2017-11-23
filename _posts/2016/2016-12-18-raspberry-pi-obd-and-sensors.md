@@ -122,32 +122,29 @@ GPIO.cleanup()
 
 
 ```python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
 import serial
 import time
-def hexShow(argv):  
-    result = ''  
-    hLen = len(argv)  
-    for i in xrange(hLen):  
-        hvol = ord(argv[i])  
-        hhex = '%02x'%hvol  
-        result += hhex+' '  
-    print 'hexShow:',result  
   
-t = serial.Serial('/dev/ttyAMA0',9600)  
-t.setTimeout(1.5)
-while True:
-    t.flushInput()
-    time.sleep(0.5)
-    retstr = t.read(10)
-    hexShow(retstr)
-    if len(retstr)==10:
-        if(retstr[0]==b"\xaa" and retstr[1]==b'\xc0'):
-            checksum=0
-            for i in range(6):
-                checksum=checksum+ord(retstr[2+i])
-            if checksum%256 == ord(retstr[8]):
-                pm25=ord(retstr[2])+ord(retstr[3])*256
-                pm10=ord(retstr[4])+ord(retstr[5])*256
-                print "pm2.5:%.1f pm10 %.1f"%(pm25/10.0,pm10/10.0)
+ser = serial.Serial('/dev/ttyAMA0', 9600)  
+ser.setTimeout(1.5)
+
+def get_pm25():
+	while True:
+	    ser.flushInput()
+	    time.sleep(0.5)
+	    result = ser.read(10)
+	
+	    if len(result) == 10:
+	        if(result[0] == 0xaa and result[1] == 0xc0):
+	            checksum = 0
+	            for i in range(6):
+	                checksum = checksum + int(result[2+i])
+	
+	            if checksum % 256 == result[8]:
+	                pm25 = (int(result[3]) * 256 + int(result[2])) / 10.0
+	                print("pm2.5:%.1f" %pm25)
+
+if __name__ == '__main__':  
+	get_pm25()
 ```
