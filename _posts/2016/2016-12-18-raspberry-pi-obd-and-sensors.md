@@ -30,6 +30,9 @@ tags:
 
 ### 温湿度DHT11
 
+> DHT11采用串行接口单线双向传输，数字线DATA用于与DHT11的通信和同步，采用单总线数据格式，一次通信时间4ms左右，一次完整数据传输为40位，数据分为整数和小数部分。
+> 8bit湿度整数数据|8bit湿度小数数据|8bit温度整数数据|8bit温度小数数据|8bit校验和
+
 ```python
 #!/usr/bin/python
 import RPi.GPIO as GPIO
