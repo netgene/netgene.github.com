@@ -30,8 +30,9 @@ Linux - 非阻塞socket编程处理EAGAIN错误
 这表明你在非阻塞模式下调用了阻塞操作，在该操作没有完成就返回这个错误，这个错误不会破坏socket的同步，不用管它，下次循环接着recv就可以。 对非阻塞socket而言，EAGAIN不是一种错误。在VxWorks和Windows上，EAGAIN的名字叫做EWOULDBLOCK。
 另外，如果出现EINTR即errno为4，错误描述Interrupted system call，操作也应该继续。
 最后，如果recv的返回值为0，那表明连接已经断开，我们的接收操作也应该结束。
----------------------------------------
 linux下EAGAIN、WOULDBLOCK错误码都是11
+
+#### recv分多次接收数据 ?
 
 #### 内连接 inner join
 
