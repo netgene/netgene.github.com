@@ -12,12 +12,26 @@ tags:
 #### trancate delete区别
 
 truncate是DDL語言.delete是DML語言 DDL語言是自動提交的.命令完成就不可回滾.truncate的速度也比delete要快得多.  
-runcate,drop是ddl, 操作立即生效,原数据不放到rollbacksegment中,不能回滚. 操作不触发trigger.   
+truncate,drop是ddl, 操作立即生效,原数据不放到rollbacksegment中,不能回滚. 操作不触发trigger.   
 
 trancate清空表数据，不可恢复。  
 delete from 清空表数据，需commit，可回滚。  
 
-#### recv接收数据 返回值
+#### recv接收数据 EAGAIN、EWOULDBLOCK、EINTR
+
+EAGAIN、EWOULDBLOCK、EINTR与非阻塞 长连接
+EWOULDBLOCK用于非阻塞模式，不需要重新读或者写
+EINTR指操作被中断唤醒，需要重新读/写
+在Linux环境下开发经常会碰到很多错误(设置errno)，其中EAGAIN是其中比较常见的一个错误(比如用在非阻塞操作中)。
+从字面上来看，是提示再试一次。这个错误经常出现在当应用程序进行一些非阻塞(non-blocking)操作(对文件或socket)的时候。例如，以 O_NONBLOCK的标志打开文件/socket/FIFO，如果你连续做read操作而没有数据可读。此时程序不会阻塞起来等待数据准备就绪返 回，read函数会返回一个错误EAGAIN，提示你的应用程序现在没有数据可读请稍后再试。
+又例如，当一个系统调用(比如fork)因为没有足够的资源(比如虚拟内存)而执行失败，返回EAGAIN提示其再调用一次(也许下次就能成功)。
+Linux - 非阻塞socket编程处理EAGAIN错误
+在linux进行非阻塞的socket接收数据时经常出现Resource temporarily unavailable，errno代码为11(EAGAIN)，这是什么意思？
+这表明你在非阻塞模式下调用了阻塞操作，在该操作没有完成就返回这个错误，这个错误不会破坏socket的同步，不用管它，下次循环接着recv就可以。 对非阻塞socket而言，EAGAIN不是一种错误。在VxWorks和Windows上，EAGAIN的名字叫做EWOULDBLOCK。
+另外，如果出现EINTR即errno为4，错误描述Interrupted system call，操作也应该继续。
+最后，如果recv的返回值为0，那表明连接已经断开，我们的接收操作也应该结束。
+---------------------------------------
+linux下EAGAIN、WOULDBLOCK错误码都是11
 
 #### 内连接 inner join
 
