@@ -7,6 +7,8 @@ categories:
 tags:
 ---
 
+----------------------------------------------------------
+
 #### trancate delete区别
 
 truncate是DDL語言.delete是DML語言 DDL語言是自動提交的.命令完成就不可回滾.truncate的速度也比delete要快得多.  
