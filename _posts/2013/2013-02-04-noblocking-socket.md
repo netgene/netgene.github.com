@@ -73,8 +73,7 @@ int tcp_send(int fd, char *buf, int len)
         {
             if (errno == EINTR) //如果errno为EINTR  ，表示被中断了，可以继续写，或者等待epoll或select的后续通知。
                 continue;
-            else if (errno == EAGAIN || errno == EWOULDBLOCK) //表示当前缓冲区写满，可以继续写，
-或者等待epoll或select的后续通知，一旦有缓冲区，就会触发写操作。
+            else if (errno == EAGAIN || errno == EWOULDBLOCK) //表示当前缓冲区写满，可以继续写，或者等待epoll或select的后续通知，一旦有缓冲区，就会触发写操作。
             {
                 LOG_WARN("tcp_send:EAGAIN, fd = %d len = %d\n", fd, len);
                 break;
