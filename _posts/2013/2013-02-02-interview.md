@@ -8,7 +8,7 @@ tags:
 ---
 
 
-uc
+### uc
 
 #### 类对象中的内存对齐  结构体的内存对齐
 
@@ -18,7 +18,7 @@ uc
 
 ---
 
-dj
+### dj
 
 #### trancate delete区别
 
@@ -77,6 +77,387 @@ inner join(等值连接) 只返回两个表中联结字段相等的行
 （2）析构函数可以是虚函数，且常常如此  
 这个就好理解了，因为此时 vtable 已经初始化了；况且我们通常通过基类的指针来销毁对象，如果析构函数不为虚的话，就不能正确识别对象类型，从而不能正确销毁对象。
 
+
+---
+
+### zjcc
+
+#### 内存对齐
+
+则1：结构体中第一个成员的偏移量是0，以后每个成员的位置是x的倍数；
+           x = min(#pragma pack(), 该成员自身的长度)
+规则2：成员对齐后，结构体自身也要对齐，按照y的倍数进行；
+          y = min(#pragma pack(), 最大成员尺寸)。
+其中#pragma pack() 代表编译器默认以多少字节进行对齐，通常情况下是8Byte。
+
+[http://blog.csdn.net/vonzhoufz/article/details/32131801](http://blog.csdn.net/vonzhoufz/article/details/32131801)  
+
+#### ++i i++
+```c++
+printf("%d %d", i++, i++); //error
+```c++
+
+#### malloc 分配
+
+```c++
+void getm(char **p, int num)
+{
+	*p = (char*)malloc(sizeof(char)*num);
+}
+
+char* getm1(int num)
+{
+	char *s = (char*)malloc(sizeof(char)*num);
+	return s;
+}
+int main()
+{
+	char *str = NULL;
+	getm(&str, 100);
+	strcpy(str, "hello");
+	printf("%s\n",str);
+
+	free(str);
+	str=NULL;
+	
+	char *str1 = NULL;
+	str1=getm1(100);
+	strcpy(str1, "hi");
+	printf("%s\n",str1);
+	free(str1);
+	str1=NULL;
+}
+```
+
+#### 实现string类
+```c++
+/////////////////////////////////////////////////////////////  
+//  
+// 自定义字符串类MyString  
+//  
+/////////////////////////////////////////////////////////  
+////////////////////  
+#include <iostream>  
+#include <cstring>  
+#include <malloc.h>  
+using namespace std ;  
+  
+// 声明  
+class MyString ;  
+  
+// 声明  
+ostream& operator << ( ostream& os , const MyString& str ) ;  
+istream& operator >> ( istream& is , const MyString& str ) ;  
+  
+// define of class  
+class MyString  
+{  
+public:  
+    // 默认构造函数  
+    MyString( char* str = "" ) ;  
+  
+    // 拷贝构造函数  
+    MyString( const MyString& str ) ;  
+  
+    // 重载赋值运算符  
+    MyString& operator = ( const MyString& str ) ;  
+  
+    // 重载输入运算符  
+    friend istream& operator >> ( istream& is , const MyString& str ) ;  
+  
+    // 重载输出运算符  
+    friend ostream& operator << ( ostream& os , const MyString& str ) ;  
+  
+    // 重载等于运算符  
+    bool operator == ( const MyString& ) ;  
+  
+    // 返回字符串的长度  
+    int length() const { return strlen( ch )  ; }  
+  
+    // 重载+运算符  
+    MyString& operator + ( const MyString& str ) ;  
+  
+    // 在字符串中查找某个字符  
+    char* findChar( char* start , char* last , char ch ) ;  
+  
+public:  
+    char ch[1000] ;  
+} ;  
+  
+// implement of class   
+  
+// 默认构造函数  
+MyString::MyString( char* str )   
+{  
+    int i = 0 ;  
+    while( str[i] != '\0' )  
+    {  
+        ch[i] = str[i] ;  
+        i++ ;  
+    }  
+    ch[i] = '\0' ;  
+}  
+  
+// 拷贝构造函数  
+MyString::MyString( const MyString& str )  
+{  
+    int i = 0 ;  
+    while( str.ch[i] != '\0' )  
+    {  
+        ch[i] = str.ch[i] ;  
+        i++ ;  
+    }  
+    ch[i] = '\0' ;  
+}  
+  
+// 重载赋值运算符  
+MyString& MyString::operator = ( const MyString& str )  
+{  
+    if( &str != this )  
+    {  
+        int i = 0 ;  
+        while( str.ch[i] != '\0' )  
+        {  
+            ch[i] = str.ch[i] ;  
+            i++ ;  
+        }  
+        ch[i] = '\0' ;  
+    }  
+    return *this ;  
+}  
+  
+// 重载输出运算符  
+ostream& operator << ( ostream& os , const MyString& str )  
+{  
+    for( int i = 0 ; i < strlen( str.ch ) ; i++ )  
+    {  
+        os << str.ch[i] ;   
+    }  
+  
+    return os ;  
+}  
+  
+// 重载输入运算符  
+istream& operator >> ( istream& is , MyString& str )  
+{  
+    char c ;  
+    int i = 0 ;  
+    while( 1 )  
+    {  
+        is >> noskipws ;  
+        is >> c ;  
+        if( c == '\n' )  
+        {  
+            break ;  
+        }  
+        else  
+        {  
+            str.ch[i] = c ;  
+            i++ ;  
+        }  
+    }  
+    str.ch[i] = '\0' ;  
+  
+    return is ;  
+}  
+  
+// 重载等于运算符  
+bool MyString::operator == ( const MyString& str )  
+{  
+    bool is_OK = true ;  
+  
+    if( strlen( this->ch ) == strlen( str.ch ) )  
+    {  
+        for( int i = 0 ; i < strlen( ch ) ; i++ )  
+        {  
+            if( ch[i] != str.ch[i] )  
+            {  
+                is_OK = false ;  
+            }  
+        }  
+    }  
+    else  
+    {  
+        return false ;  
+    }  
+    return is_OK ;  
+}  
+  
+// 重载+运算符  
+MyString& MyString::operator + ( const MyString& str )  
+{  
+    int size = this->length() + str.length() ;  
+  
+    char* s = ( char* )malloc( sizeof( char ) * size ) ;  
+  
+    for( int i = 0 ; i < this->length() ; i++ )  
+    {  
+        s[i] = this->ch[i] ;  
+    }  
+  
+    for( int j = 0 ; j < str.length() ; j++ )  
+    {  
+        s[i+j] = str.ch[j] ;  
+    }  
+  
+    s[i+j] = '\0' ;   // 字符串结尾,必须要注意  
+  
+    return MyString( s ) ;  
+}  
+  
+// 返回指向要查找的字符的指针，找不到返回NULL  
+char* MyString::findChar( char* first , char* last , char ch )   
+{  
+    while( first != last && *first != ch )  
+    {  
+        ++first ;  
+    }  
+    if( first == last )  
+    {  
+        return NULL ;  
+    }  
+    else  
+    {  
+        return first ;  
+    }  
+}  
+  
+//测试程序  
+int main()  
+{  
+    MyString  str( "hello World!" ) ;  
+    cout << "str=" << str << endl ;  
+    cout << &str.ch ;  
+  
+    cout << endl << endl  ;  
+  
+    MyString str1( str ) ;  
+    cout << "str1= " << str1 << endl ;  
+    cout << &str1.ch ;  
+  
+    cout << endl << endl  ;  
+  
+  
+    MyString str2 ;  
+    str2 = str ;  
+    cout << "str2=" << str2 << endl ;  
+    cout << &str2.ch ;  
+  
+    cout << endl << endl  ;  
+  
+  
+    MyString str3 , str4 ;  
+    cin >> str3 >> str4 ;  
+    if( str3 == str4 )  
+    {  
+        cout << "str3 == str4 " << endl ;  
+    }  
+    else  
+    {  
+        cout << "str3 != str4 " << endl ;  
+    }  
+  
+    MyString str5 = str3 + str4 ;  
+  
+    cout << "str5 = " << str5 << endl ;  
+  
+    char ch ;  
+    cout << "输入要查找的字符:" ;  
+    cin >> ch ;  
+  
+    char* pChar = str5.findChar( str5.ch , str5.ch + str5.length() , ch ) ;  
+  
+    if( pChar != NULL )  
+    {  
+        cout << "查找到的字符为:" << *pChar << endl ;  
+    }  
+    else  
+    {  
+        cout << "未找到!" << endl ;  
+    }  
+  
+    return 0 ;  
+}  
+```
+
+#### 数据库索引 数据库优化
+
+数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。
+在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法。这种数据结构，就是索引
+
+创建索引可以大大提高系统的性能。
+第一，通过创建唯一性索引，可以保证数据库表中每一行数据的唯一性。
+第二，可以大大加快数据的检索速度，这也是创建索引的最主要的原因。
+第三，可以加速表和表之间的连接，特别是在实现数据的参考完整性方面特别有意义。
+第四，在使用分组和排序子句进行数据检索时，同样可以显著减少查询中分组和排序的时间。
+第五，通过使用索引，可以在查询的过程中，使用优化隐藏器，提高系统的性能。 
+
+也许会有人要问：增加索引有如此多的优点，为什么不对表中的每一个列创建一个索引呢？因为，增加索引也有许多不利的方面。
+第一，创建索引和维护索引要耗费时间，这种时间随着数据量的增加而增加。
+第二，索引需要占物理空间，除了数据表占数据空间之外，每一个索引还要占一定的物理空间，如果要建立聚簇索引，那么需要的空间就会更大。
+第三，当对表中的数据进行增加、删除和修改的时候，索引也要动态的维护，这样就降低了数据的维护速度。
+
+#### 线程安全 可重入函数
+
+线性安全：一般来说，一个函数被称为线程安全的，当且仅当被多个并发线程反复调用时，它会一直产生正确的结果。
+
+重入：即重复调用，函数被不同的流调用，有可能会出现第一次调用还没返回时就再次进入该函数开始下一次调用。
+可重入：当程序被多个线程反复执行，产生的结果正确。
+如果一个函数只访问自己的局部变量或参数，称为可重入函数。
+不可重入：当程序被多个线程反复调用，产生的结果出错。
+当函数访问一个全局的变量或者参数时，有可能因为重入而造成混乱，像这样的函数称为不可重入函数。
+
+可重入特点
+由于可重入函数多次调用不会出错，因此可重入函数不用担心数据会被破坏。可重入函数任何时候都可以被中断，一段时间后又可以运行，而相应的数据不会丢失。可重入函数只使用局部变量，即保存在CPU寄存器或者堆栈中；或者如果使用全局变量时，则要对全局变量予以保护。
+•不可重入特点
+如果一个函数符合以下条件之一的，则是不可重入的：
+（1）调用了malloc/free函数，因为malloc函数是用全局链表来管理堆的。
+（2）调用了标准I/O库函数，标准I/O库的很多实现都以不可重入的方式使用全局数据结构。
+（3）可重入体内使用了静态的数据结构。
+
+可重入函数与线程安全的区别与联系：  
+（1）线程安全是在多个线程情况下引发的，而可重入函数可以在只有一个线程的情况下来说。
+（2）线程安全不一定是可重入的，而可重入函数则一定是线程安全的。
+（3）如果一个函数中有全局变量，那么这个函数既不是线程安全也不是可重入的。
+（4）如果将对临界资源的访问加上锁，则这个函数是线程安全的，但如果这个重入函数若锁还未释放则会产生死锁，因此是不可重入的。
+（5）线程安全函数能够使不同的线程访问同一块地址空间，而可重入函数要求不同的执行流对数据的操作互不影响使结果是相同的。
+
+#### 智能指针 shared_ptr weak_ptr
+
+指针	简要描述
+shared_ptr	允许多个指针指向同一个对象
+unique_ptr	独占所指向的对象
+weak_ptr	shared_ptr的弱引用
+
+weak_ptr是一种不控制所指向对象生存期的智能指针，指向shared_ptr管理的对象，但是不影响shared_ptr的引用计数。它像shared_ptr的助手，一旦最后一个shared_ptr被销毁,对象就被释放，weak_ptr不影响这个过程。
+
+#### 进程间线程通信 进程间线程通信
+
+进程间通信：信号、信号量、消息队列、共享内存、管道、套接字
+
+共享内存( shared memory ) ：共享内存就是映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问。共享内存是最快的 IPC 方式，它是针对其他进程间通信方式运行效率低而专门设计的。它往往与其他通信机制，如信号两，配合使用，来实现进程间的同步和通信。
+
+线程间通信：锁、信号量、信号
+
+两个进程间的线程级通信？？？
+
+#### 同步消息和异步消息通信
+
+1、同步方式
+
+两个通信应用服务之间必须要进行同步，两个服务之间必须都是正常运行的。发送程序和接收程序都必须一直处于运行状态，并且随时做好相互通信的准备。
+
+发送程序首先向接收程序发起一个请求，称之为发送消息，发送程序紧接着就会堵塞当前自身的进程，不与其他应用进行任何的通信以及交互，等待接收程序的响应，待发送消息得到接收程序的返回消息之后会继续向下运行，进行下一步的业务处理。
+
+2、异步方式
+
+两个通信应用之间可以不用同时在线等待，任何一方只需各自处理自己的业务，比如发送方发送消息以后不用登录接收方的响应，可以接着处理其他的任务。也就是说发送方和接收方都是相互独立存在的，发送方只管方，接收方只能接收，无须去等待对方的响应。
+
+回调、会话。。。
+
+#### 离线访问 数据库索引 载入光盘
+
+#### 工厂模式  单例模式 懒汉模式 饿汉模式 等级模式
 
 ---
 
