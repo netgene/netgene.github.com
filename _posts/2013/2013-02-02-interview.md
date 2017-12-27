@@ -517,6 +517,18 @@ weak_ptr是一种不控制所指向对象生存期的智能指针，指向shared
 
 #### UDP
 
+[http://www.cnblogs.com/zhili/archive/2012/09/01/UDP_Multicast.html](http://www.cnblogs.com/zhili/archive/2012/09/01/UDP_Multicast.html)  
+[https://blog.codingnow.com/2014/11/skynet_ae_udp_oeoe.html](https://blog.codingnow.com/2014/11/skynet_ae_udp_oeoe.html)  
+[https://blog.codingnow.com/2016/03/reliable_udp.html](https://blog.codingnow.com/2016/03/reliable_udp.html)  
+
+除了dns查询，还有tftp协议（一种简单的文件传输协议）也是基于udp的，该协议也是基于应答，包长度限制512字节，支持多个命令。
+
+unreal3 实现了UDP 摸拟TCP，事实证明是比TCP传输更流畅，包大小不超过576，也就是MTU大小，牺牲了TCP的一个功能：如果网络状态良好，程序崩溃导致的socket销毁，通讯另一端是马上能知道的。UDP无连接，另一端就无法及时知道，只能依赖心跳。应该说，有成熟稳定的UDP可靠传输从理论上来说也是比TCP更流畅的
+
+在国内最好udp包大小最好不超过576，我们踩过坑（国内一些设备制造商没有严格遵循rfc标准），576最安全，fps,moba,球，车类的上行包大多数不超过100字节，下行不超过300，所以大多数情形下不会因为分包造成有效payload减少
+
+kcp
+
 #### 分布式事务 最终一致性
 
 ---
