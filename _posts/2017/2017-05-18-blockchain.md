@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BlockChain
+title: 区块链
 date: 2017-05-18 20:20:20
 categories:
 - BlockChain
@@ -15,7 +15,7 @@ categories:
 
 ### 其他学习资料
 
-![https://zhuanlan.zhihu.com/p/29807632](https://zhuanlan.zhihu.com/p/29807632)  
+![https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg](https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg)  
 
 [https://zhuanlan.zhihu.com/p/29807632](https://zhuanlan.zhihu.com/p/29807632)  
 [https://www.zhihu.com/question/20941124/answer/20411491](https://www.zhihu.com/question/20941124/answer/20411491)  
