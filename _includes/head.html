@@ -5,9 +5,9 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} {{ site.tagline }}
+      {{ site.title }}-{{ site.description }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {{ page.title }}-{{ site.title }}
     {% endif %}
   </title>
 
