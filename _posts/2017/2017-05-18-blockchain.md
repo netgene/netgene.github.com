@@ -13,10 +13,17 @@ categories:
 
 ### 学习笔记
 
+#### 关键字
+
+electronic cash、peer-to-peer network、digital signature、double-spending problem、proof-of-work chain
+
+工作量证明、二次支付、P2P网络、独立验证、激励系统
+
 ### 其他学习资料
 
 ![https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg](https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg)  
 
+[精通比特币 http://zhibimo.com/read/wang-miao/mastering-bitcoin/](http://zhibimo.com/read/wang-miao/mastering-bitcoin/)  
 [https://zhuanlan.zhihu.com/p/29807632](https://zhuanlan.zhihu.com/p/29807632)  
 [https://www.zhihu.com/question/20941124/answer/20411491](https://www.zhihu.com/question/20941124/answer/20411491)  
 [https://www.zhihu.com/question/39609610/answer/104664482](https://www.zhihu.com/question/39609610/answer/104664482)  
