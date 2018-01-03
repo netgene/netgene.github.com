@@ -13,6 +13,8 @@ categories:
 
 ### 学习笔记
 
+![bitcoin](http://junwang.me/images/posts/2017-05-18-bitcoin.png)
+
 #### 关键字
 
 electronic cash、peer-to-peer network、digital signature、double-spending problem、proof-of-work chain
