@@ -25,7 +25,7 @@ electronic cash、peer-to-peer network、digital signature、double-spending pro
 - 摇骰子 - 挖矿工作量证明
 - 珠子 - 区块
 - 珠链 - 区块链
-- 关键问题：最长链问题 去中心化。
+- 关键问题：去中心化可信最长链。
 
 ### 学习要点
 
