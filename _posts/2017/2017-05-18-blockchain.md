@@ -19,7 +19,13 @@ categories:
 
 electronic cash、peer-to-peer network、digital signature、double-spending problem、proof-of-work chain
 
-电子钱包、二次支付、P2P网络、工作量证明、区块链、独立验证、激励系统、挖矿与共识
+电子钱包、二次支付、P2P网络、工作量证明、区块链、独立验证、激励系统、挖矿与共识、去中心化
+
+形象描述:摇骰子摇到符合数字，负责验证生成记录交易的珠子，串到链子上。根据珠链可以算出每个钱包的金额。
+- 摇骰子 - 挖矿工作量证明
+- 珠子 - 区块
+- 珠链 - 区块链
+- 关键问题：最长链问题 去中心化。
 
 ### 学习要点
 
