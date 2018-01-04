@@ -15,11 +15,7 @@ categories:
 
 ![bitcoin](http://junwang.me/images/posts/2017-05-18-bitcoin.png)
 
-#### 关键字
-
-electronic cash、peer-to-peer network、digital signature、double-spending problem、proof-of-work chain
-
-电子钱包、二次支付、P2P网络、工作量证明、区块链、独立验证、激励系统、挖矿与共识、去中心化
+#### 总结
 
 形象描述:摇骰子摇到符合数字，负责验证生成记录交易的珠子，串到链子上。根据珠链可以算出每个钱包的金额。
 - 摇骰子 - 挖矿工作量证明
@@ -28,6 +24,12 @@ electronic cash、peer-to-peer network、digital signature、double-spending pro
 - 关键问题：去中心化可信最长链。
 
 比特币：稀缺性[定量]、流动性[交易]、去中心[信仰]。
+
+#### 关键字
+
+electronic cash、peer-to-peer network、digital signature、double-spending problem、proof-of-work chain
+
+电子钱包、二次支付、P2P网络、工作量证明、区块链、独立验证、激励系统、挖矿与共识、去中心化
 
 ### 学习要点
 
