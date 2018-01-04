@@ -27,6 +27,8 @@ electronic cash、peer-to-peer network、digital signature、double-spending pro
 - 珠链 - 区块链
 - 关键问题：去中心化可信最长链。
 
+比特币：稀缺性[定量]、流动性[交易]、去中心[信仰]。
+
 ### 学习要点
 
 #### 比特币钱包 
