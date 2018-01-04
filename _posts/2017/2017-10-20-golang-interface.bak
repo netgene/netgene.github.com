@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Go深入interface
+- title: Go深入interface
 date: 2017-10-20 20:20:20
 categories:
 - golang
