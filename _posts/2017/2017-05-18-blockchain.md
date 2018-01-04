@@ -50,6 +50,7 @@ electronic cash、peer-to-peer network、digital signature、double-spending pro
 
 - 区块结构、区块头哈希值、区块高度
 - Merkle树归纳一个区块中的所有交易
+- 一个长区块链的存在可以让区块链的历史不可改变，这也是比特币安全性的一个关键特征。
 
 #### 交易
 
