@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 区块链
+title: Bitcoin比特币框架学习
 date: 2017-05-18 20:20:20
 categories:
 - BlockChain
@@ -61,6 +61,7 @@ electronic cash、peer-to-peer network、digital signature、double-spending pro
 ![https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg](https://pic4.zhimg.com/v2-2cb0151b6f836deffe6e91d38dfe4a5e_r.jpg)  
 
 [精通比特币 http://zhibimo.com/read/wang-miao/mastering-bitcoin/](http://zhibimo.com/read/wang-miao/mastering-bitcoin/)  
+[Bitcoin 的基本原理 https://blog.codingnow.com/2011/05/bitcoin.html](https://blog.codingnow.com/2011/05/bitcoin.html)  
 [https://www.zhihu.com/question/22039036](https://www.zhihu.com/question/22039036)  
 [https://zhuanlan.zhihu.com/p/29807632](https://zhuanlan.zhihu.com/p/29807632)  
 [https://www.zhihu.com/question/20941124/answer/20411491](https://www.zhihu.com/question/20941124/answer/20411491)  
