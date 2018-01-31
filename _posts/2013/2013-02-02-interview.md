@@ -561,6 +561,22 @@ kcp
 
 ---
 
+zyhlw
+
+#### 数据同步 分库分表
+
+#### mysql存储引擎 innoDB
+
+#### oracle 触发器
+
+#### 开源消息队列 RabbitMQ, ZeroMQ, Kafka
+
+#### hadoop spark
+
+#### 开源库 folly leveldb Memcached
+
+---
+
 ### c++ 面向对象 抽象 封装 继承 多态
 
 - 抽象：找出要解决的问题。
