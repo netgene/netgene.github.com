@@ -49,7 +49,9 @@ futures:
 ### HTTP／1.0／1.1／2.0
 
 [HTTP/2.0 相比1.0有哪些重大改进？ https://www.zhihu.com/question/34074946](https://www.zhihu.com/question/34074946)   
+[HTTP 2.0与HTTP 1.1区别](https://www.cnblogs.com/frankyou/p/6145485.html)  
 [HTTP2与HTTP1.1的区别 http://blog.csdn.net/xiongyk/article/details/52443696](http://blog.csdn.net/xiongyk/article/details/52443696)    
+[WebSocket 是什么原理？为什么可以实现持久连接？ https://www.zhihu.com/question/20215561](https://www.zhihu.com/question/20215561)  
 
 HTTP/2.0 相比1.0:  
 - 1.HTTP2使用的是二进制传送，HTTP1.X是文本（字符串）传送。 大家都知道HTTP1.X使用的是明文的文本传送，而HTTP2使用的是二进制传送，二进制传送的单位是帧和流。帧组成了流，同时流还有流ID标示，通过流ID就牵扯出了第二个区别
@@ -144,3 +146,6 @@ Session的实现方式：
 
 ![https](https://images0.cnblogs.com/i/116165/201407/122142366922455.png)  
 
+### 其他
+
+[AFNetworking到底做了什么？ https://www.jianshu.com/p/856f0e26279d](https://www.jianshu.com/p/856f0e26279d)  
