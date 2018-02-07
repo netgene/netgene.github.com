@@ -8,8 +8,5 @@ tags:
 - spacex
 ---
 
-```
-<video id="video" controls="" preload="none">
-	<source id="mp4" src="https://www.bilibili.com/video/av19246790/?from=search&seid=9441005500454371815" type="video/mp4">
-</video>
-```
+<iframe src="https://www.bilibili.com/video/av19246790/?from=search&seid=9441005500454371815">
+
