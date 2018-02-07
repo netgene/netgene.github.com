@@ -12,7 +12,7 @@ tags:
 <video controls="" autoplay="" name="media"><source src="http://fs.w.kugou.com/201802072026/b60f5849f44bbc87ce4297bfc7a07b0f/G037/M01/0E/17/xYYBAFYl3MeAWChpAE6IbEYt4HY814.mp3" type="audio/mpeg"></video>
 《space oddity》  
 
-<iframe height=498 width=510 src='http://player.youku.com/embed/XMzM4NDgyNzg4MA==' frameborder=0 'allowfullscreen'></iframe>
+<iframe height=498 width=510 src='http://player.youku.com/embed/XMzM4NDgyNzg4MA==' frameborder=0 'allowfullscreen'>
 
 ![don't panic](https://pic1.zhimg.com/80/v2-4f5c0ad490f3221e1c728fd6da90044a_hd.jpg)  
 
