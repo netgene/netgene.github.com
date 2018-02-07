@@ -1,6 +1,6 @@
 ---
 layout: post
-title: spacex falcon heavy. Don't panic
+title: spacex falcon heavy
 date: 2018-02-07 20:20:20
 categories:
 - 
