@@ -1,6 +1,6 @@
 ---
 layout: post
-title: spacex falcon heavy
+title: spacex falcon heavy test flight
 date: 2018-02-07 20:20:20
 categories:
 - 
@@ -11,6 +11,8 @@ tags:
 
 <video controls="" autoplay="" name="media"><source src="http://fs.w.kugou.com/201802072026/b60f5849f44bbc87ce4297bfc7a07b0f/G037/M01/0E/17/xYYBAFYl3MeAWChpAE6IbEYt4HY814.mp3" type="audio/mpeg"></video>
 《space oddity》  
+
+北京时间2018年2月7日 SpaceX 猎鹰重型火箭首飞发射直播录屏
 
 <embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=19246790&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
 
