@@ -8,7 +8,8 @@ tags:
 - spacex
 ---
 
-space oddity:<video controls="" autoplay="" name="media"><source src="http://fs.w.kugou.com/201802072026/b60f5849f44bbc87ce4297bfc7a07b0f/G037/M01/0E/17/xYYBAFYl3MeAWChpAE6IbEYt4HY814.mp3" type="audio/mpeg"></video>
+《space oddity》  
+<video controls="" autoplay="" name="media"><source src="http://fs.w.kugou.com/201802072026/b60f5849f44bbc87ce4297bfc7a07b0f/G037/M01/0E/17/xYYBAFYl3MeAWChpAE6IbEYt4HY814.mp3" type="audio/mpeg"></video>
 
 <embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=19246790&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
 
