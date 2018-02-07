@@ -103,7 +103,7 @@ Connection: Keep-Alive
 Content-Type: text/html
 ```
 
-#### 缓存的实现原理
+### 缓存的实现原理
 
 WEB缓存(cache)位于Web服务器和客户端之间。
 缓存会根据请求保存输出内容的副本，例如html页面，图片，文件，当下一个请求来到的时候：如果是相同的URL，缓存直接使用副本响应访问请求，而不是向源服务器再次发送请求。
@@ -125,7 +125,7 @@ HTTP定义了3种缓存机制：
 2）Validation：用来检查以一个缓存的回应是否仍然可用。例如，如果一个回应有一个Last-Modified回应头，缓存能够使用If-Modified-Since来判断是否已改变，以便判断根据情况发送请求；
 3）Invalidation：在另一个请求通过缓存的时候，常常有一个副作用。例如，如果一个URL关联到一个缓存回应，但是其后跟着POST、PUT和DELETE的请求的话，缓存就会过期。
 
-#### Session会话
+### Session会话
 
 Session的实现方式：  
 - 1、使用Cookie来实现 服务器给每个Session分配一个唯一的JSESSIONID，并通过Cookie发送给客户端。
@@ -133,7 +133,7 @@ Session的实现方式：
 - 2、使用URL回写来实现 URL回写是指服务器在发送给浏览器页面的所有链接中都携带JSESSIONID的参数，这样客户端点击任何一个链接都会把JSESSIONID带会服务器。如果直接在浏览器输入服务端资源的url来请求该资源，那么Session是匹配不到的。Tomcat对Session的实现，是一开始同时使用Cookie和URL回写机制，如果发现客户端支持Cookie，就继续使用Cookie，停止使用URL回写。如果发现Cookie被禁用，就一直使用URL回写。jsp开发处理到Session的时候，对页面中的链接记得使用response.encodeURL() 。
 
 
-#### HTTPS
+### HTTPS
 
 ![https](https://images0.cnblogs.com/i/116165/201407/122142366922455.png)  
 
