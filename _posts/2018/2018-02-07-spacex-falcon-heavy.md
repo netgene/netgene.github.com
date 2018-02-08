@@ -8,6 +8,9 @@ tags:
 - spacex
 ---
 
+向伟大的理想与情怀致敬!  
+to Musk Elon, to spacex, to people full of ideals and feelings.
+
 <video width = "740" controls="" autoplay="" name="media"><source src="https://f.us.sinaimg.cn/000QxLt7lx07hZDako1a01040202e5ku0k020.mp4?label=mp4_720p&template=28&Expires=1518069803&ssig=5y5KgTtCB%2F&KID=unistore,video" type="audio/mpeg"></video>
 
 ![launch](https://static.businessinsider.com/image/5a7a19f6136ec53f008b48bf-/launch.gif)  
