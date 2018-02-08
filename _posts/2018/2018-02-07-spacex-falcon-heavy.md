@@ -10,6 +10,7 @@ tags:
 
 ![launch](https://static.businessinsider.com/image/5a7a19f6136ec53f008b48bf-/launch.gif)  
 ![land](https://static.businessinsider.com/image/5a7a19f4f450ff1e008b489e-/booster%20land.gif)  
+![starman](https://static.businessinsider.com/image/5a7a19f2e559f01d008b48d4-/starman.gif)  
 
 北京时间2018年2月7日 SpaceX 猎鹰重型火箭首飞发射直播录屏
 
