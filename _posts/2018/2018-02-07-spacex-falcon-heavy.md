@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SPACE FALCON HEAVY && SPACE ODDITY
+title: SPACEX FALCON HEAVY && SPACE ODDITY
 date: 2018-02-07 20:20:20
 categories:
 - 
