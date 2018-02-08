@@ -8,15 +8,14 @@ tags:
 - spacex
 ---
 
+<video controls="" autoplay="" name="media"><source src="https://f.us.sinaimg.cn/000QxLt7lx07hZDako1a01040202e5ku0k020.mp4?label=mp4_720p&template=28&Expires=1518069803&ssig=5y5KgTtCB%2F&KID=unistore,video" type="audio/mpeg"></video>
+
 ![launch](https://static.businessinsider.com/image/5a7a19f6136ec53f008b48bf-/launch.gif)  
 ![land](https://static.businessinsider.com/image/5a7a19f4f450ff1e008b489e-/booster%20land.gif)  
 ![starman](https://static.businessinsider.com/image/5a7a19f2e559f01d008b48d4-/starman.gif)  
 ![don't panic](http://wx3.sinaimg.cn/mw690/005vTPPRly1fo7lqvih58j30nq0da40s.jpg)  
 ![rogster](http://wx1.sinaimg.cn/mw690/005vTPPRly1fo7lr5amxcj30sg0hswhe.jpg)  
 ![Made on Earth by humans](http://wx2.sinaimg.cn/mw690/005vTPPRly1fo7nym9i26j30r00r0mz6.jpg)  
-
-<video controls="" autoplay="" name="media"><source src="http://fs.w.kugou.com/201802072026/b60f5849f44bbc87ce4297bfc7a07b0f/G037/M01/0E/17/xYYBAFYl3MeAWChpAE6IbEYt4HY814.mp3" type="audio/mpeg"></video>
-《space oddity》  
 
 [北京时间2018年2月7日 SpaceX 猎鹰重型火箭首飞发射直播录屏](https://www.bilibili.com/video/av19246790/?zw)  
 
