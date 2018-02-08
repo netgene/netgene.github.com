@@ -8,7 +8,7 @@ tags:
 - spacex
 ---
 
-<video width = "750" controls="" autoplay="" name="media"><source src="https://f.us.sinaimg.cn/000QxLt7lx07hZDako1a01040202e5ku0k020.mp4?label=mp4_720p&template=28&Expires=1518069803&ssig=5y5KgTtCB%2F&KID=unistore,video" type="audio/mpeg"></video>
+<video width = "740" controls="" autoplay="" name="media"><source src="https://f.us.sinaimg.cn/000QxLt7lx07hZDako1a01040202e5ku0k020.mp4?label=mp4_720p&template=28&Expires=1518069803&ssig=5y5KgTtCB%2F&KID=unistore,video" type="audio/mpeg"></video>
 
 ![launch](https://static.businessinsider.com/image/5a7a19f6136ec53f008b48bf-/launch.gif)  
 ![land](https://static.businessinsider.com/image/5a7a19f4f450ff1e008b489e-/booster%20land.gif)  
