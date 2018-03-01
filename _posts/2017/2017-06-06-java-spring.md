@@ -140,11 +140,3 @@ Contexts known to this server are:
 [Java工程师成神之路~](http://www.hollischuang.com/archives/489)  
 [Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli)  
 [Spring教程](http://www.yiibai.com/spring/)
-
-
-springMVC 
-
-![http://img.blog.csdn.net/20160427094830780](http://img.blog.csdn.net/20160427094830780)  
-![http://assets.tianmaying.com/md-image/dbd1017dffce1d08e653d05baa1e4934.png](http://assets.tianmaying.com/md-image/dbd1017dffce1d08e653d05baa1e4934.png)  
-
-[https://www.tianmaying.com/tutorial/spring-mvc-quickstart](https://www.tianmaying.com/tutorial/spring-mvc-quickstart)  
