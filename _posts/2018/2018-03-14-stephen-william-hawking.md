@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Stephen William Hawking
+title: Stephen William Hawking - 他只是飞向了群星
 date: 2018-03-14 20:20:20
 categories:
 - people
 tags:
 ---
+
+他只是带着时间简史飞向了群星。
 
 [Stephen William Hawking，1942年1月8日－2018年3月14日](https://zh.wikipedia.org/wiki/%E5%8F%B2%E8%92%82%E8%8A%AC%C2%B7%E9%9C%8D%E9%87%91)  
 
