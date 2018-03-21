@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 密码学与网络安全
+title: 密码学与安全
 date: 2017-05-27 18:28:58
 categories:
 - 密码学与安全
