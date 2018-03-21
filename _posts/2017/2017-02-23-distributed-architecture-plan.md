@@ -3,7 +3,7 @@ layout: post
 title: 分布式架构plan
 date: 2017-02-23 20:20:20
 categories:
-- c++
+- c/c++
 tags:
 ---
 
