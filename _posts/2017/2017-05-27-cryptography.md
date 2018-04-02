@@ -41,3 +41,8 @@ tags:
 ### 比特币
 
 SHA256 区块头80位（包括交易树哈希+难度+nonce随机数) 生成的哈希要求前面n个为0
+
+### 信息
+
+[https://zhuanlan.zhihu.com/p/22474140](https://zhuanlan.zhihu.com/p/22474140)  
+[https://www.zhihu.com/question/39111535](https://www.zhihu.com/question/39111535)  
