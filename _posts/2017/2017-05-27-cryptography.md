@@ -26,7 +26,7 @@ tags:
 ### 非对称加密
 
 
-- RSA(public key, private key) ssh openssl https
+- RSA(public key, private key) ssh openssl https 该算法基于一个简单的数论事实：将两个大质数相乘容易，但要对其乘积因式分解却十分困难，因此可以将乘积作为公开加密秘钥。
 
 ### 不可逆加密
 
@@ -52,7 +52,7 @@ D和R可以被理解为两台“机器”，他们都能各自生成和测量对
 
 接下来开始做密钥协商，通信首先是在量子信道上进行。 
 
-1、 Alice选出一个0-1 bit串S（比如\underbrace{010001001\cdots 011}_{1024\ bits}
+1、 Alice选出一个0-1 bit串S（比如\underbrace{010001001\cdots 011}_{1024\bits}）
 
 2、 Alice 逐位随机选取D或R，然后通过量子信道发送S里0，1对应生成的量子态（qbit）
 
