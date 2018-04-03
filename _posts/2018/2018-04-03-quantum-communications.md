@@ -9,6 +9,8 @@ tags:
 
 [量子通信现状与展望](http://sso.gzlib.gov.cn/interlibSSO/goto/75/=jmr9bmjh9mds/kcms/detail/detail.aspx?filename=PZKX201403002&dbcode=CJFD&dbname=CJFD2014&v=)  
 
+[量子通信现状与展望_吴华_高亮标注.pdf](http://junwang.me/images/posts/量子通信现状与展望_吴华_高亮标注.pdf)  
+
 ## 关键词
 
 量子秘钥分发 量子隐形传态 BB84 诱骗态方法 纠缠光子对分发
