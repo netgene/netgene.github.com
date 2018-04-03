@@ -20,11 +20,11 @@ tags:
 将明文分成N个组，然后对各个组进行加密，形成各自的密文，最后把所有的分组密文进行合并，形成最终的密文。
 
 - DES 块加密法 密钥位56位 64位块长加密数据  3DES
-- AES 
+- AES AES-128、AES-192、AES-256
+
 - base64 Base64就是一种基于64个可打印字符来表示二进制数据的方法
 
 ### 非对称加密
-
 
 - RSA(public key, private key) ssh openssl https 该算法基于一个简单的数论事实：将两个大质数相乘容易，但要对其乘积因式分解却十分困难，因此可以将乘积作为公开加密秘钥。
 
@@ -32,9 +32,21 @@ tags:
 
 不可逆加密算法的特征是加密过程中不需要使用密钥
 
-- md5 
+- MD5 SHA-256
 - SHA-1 SHA-2 SHA-3
 - crc32
+
+### 国密
+
+国密即国家密码局认定的国产密码算法。主要有SM1，SM2，SM3，SM4。密钥长度和分组长度均为128位。
+
+- SM1 为对称加密。其加密强度与AES相当。该算法不公开，调用该算法时，需要通过加密芯片的接口进行调用。
+- SM2 基于ECC椭圆曲线。该算法已公开。由于该算法基于ECC，故其签名速度与秘钥生成速度都快于RSA。ECC 256位（SM2采用的就是ECC 256位的一种）安全强度比RSA 2048位高，但运算速度快于RSA。
+- SM3 在SHA-256基础上改进实现 SM3算法采用Merkle-Damgard结构，消息分组长度为512位，摘要值长度为256位。
+- SM4 类DES。无线局域网标准的分组数据算法。对称加密，密钥长度和分组长度均为128位。
+
+![SM2](https://img-blog.csdn.net/20170312163055305?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGNuZXRiZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
+![SM4](https://img-blog.csdn.net/20170312162913835?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGNuZXRiZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
 
 ### 密钥交换协议
 
@@ -76,9 +88,16 @@ D和R可以被理解为两台“机器”，他们都能各自生成和测量对
 
 ### 比特币
 
-SHA256 区块头80位（包括交易树哈希+难度+nonce随机数) 生成的哈希要求前面n个为0
+SHA-256 区块头80位（包括交易树哈希+难度+nonce随机数) 生成的哈希要求前面n个为0
+
+
+### 量子加密相关
+
+- BB84
+- 一次一密
 
 ### 信息
 
 [https://zhuanlan.zhihu.com/p/22474140](https://zhuanlan.zhihu.com/p/22474140)  
 [https://www.zhihu.com/question/39111535](https://www.zhihu.com/question/39111535)  
+[国密 https://blog.csdn.net/hcnetbee/article/details/53692579](https://blog.csdn.net/hcnetbee/article/details/53692579)  
