@@ -1,6 +1,6 @@
 ---
 layout: post
-title: vmware虚拟机扩容
+title: vmware虚拟机扩容(转)
 date: 2018-04-28 20:20:20
 categories:
 - 工具
