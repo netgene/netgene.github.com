@@ -7,6 +7,10 @@ categories:
 tags:
 ---
 
+[http://www.jb51.net/LINUXjishu/84599.html](http://www.jb51.net/LINUXjishu/84599.html)  
+
+摘录：
+
 ···
 二、使用linux下的fdisk工具进行分区。
 
