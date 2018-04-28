@@ -11,7 +11,7 @@ tags:
 
 摘录：
 
-···
+```
 二、使用linux下的fdisk工具进行分区。
 
 用root用户登录到你的linux系统，查看你系统的分区
@@ -145,4 +145,4 @@ Logical volume LogVol00 successfully resized
 #resize2fs /dev/VolGroup00/LogVol00 //resize2fs指令被用来增大或者收缩未加载的“ext2/ext3”文件系统的大小。
 #df -h //查看一下你的系统磁盘空间"/"目录变成了40GB
 ok，这样就大功告成了。
-···
+```
