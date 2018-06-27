@@ -27,7 +27,7 @@ tags:
 ### 非对称加密
 
 - RSA(public key, private key) ssh openssl https 该算法基于一个简单的数论事实：将两个大质数相乘容易，但要对其乘积因式分解却十分困难，因此可以将乘积作为公开加密秘钥。
-
+- DSA DSA是基于整数有限域离散对数难题的，其安全性与RSA相比差不多。
 ### 不可逆加密
 
 不可逆加密算法的特征是加密过程中不需要使用密钥
@@ -49,6 +49,35 @@ tags:
 ![SM4](https://img-blog.csdn.net/20170312162913835?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGNuZXRiZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
 
 ### 密钥交换协议
+
+#### DH "Diffie-Hellman"
+
+DH 算法又称“Diffie–Hellman 算法”。这是两位数学牛人的名称，他们创立了这个算法。该算法用来实现【安全的】“密钥交换”。它可以做到——“通讯双方在完全没有对方任何预先信息的条件下通过不安全信道创建起一个密钥”。这句话比较绕口，通俗地说，可以归结为两个优点：
+1. 通讯双方事先【不】需要有共享的秘密。
+2. 用该算法协商密码，即使协商过程中被别人全程偷窥（比如“网络嗅探”），偷窥者也【无法】知道协商得出的密钥是啥。
+
+但是 DH 算法本身也有缺点——它不支持认证。也就是说：它虽然可以对抗“偷窥”，却无法对抗“篡改”，自然也就无法对抗“中间人攻击/MITM”。为了避免遭遇 MITM 攻击，DH 需要与其它签名算法（比如 RSA、DSA、ECDSA）配合——靠签名算法帮忙来进行身份认证。
+
+DH 依赖的是——求解“离散对数问题”的困难。
+
+#### ECDH "Elliptic Curve Diffie-Hellman"
+
+ECDH 依赖的是——求解“椭圆曲线离散对数问题”的困难。
+
+#### DHE "Diffie-Hellman ephemeral"
+
+DH 和 ECDH，其密钥是持久的（静态的）。也就是说，通讯双方生成各自的密钥之后，就长时间用下去。这么干当然比较省事儿（节约性能），但是存在某种安全隐患——无法做到“前向保密”（洋文是“forward secrecy”）。
+　　为了做到“前向保密”，采用“临时密钥”（洋文是“ephemeral key”）的方式对 DH 和 ECDH 进行改良。于是得到两种新的算法——DHE 和 ECDHE。（这两种新算法的名称，就是在原有名称后面加上字母 E 表示 ephemeral）。其实算法还是一样的，只是对每个会话都要重新协商一次密钥，且密钥用完就丢弃。
+
+#### ECDHE "Elliptic Curve Diffie-Hellman ephemeral"
+
+#### PSK "Pre-Shared Key"
+
+【预先】让通讯双方共享一些密钥（通常是【对称加密】的密钥）
+
+#### SRP "Secure Remote Password"
+
+SRP 算法有点类似于刚才提到的 PSK——只不过 client/server 双方共享的是比较人性化的密码（password）而不是密钥（key）。该算法采用了一些机制（盐/salt、随机数）来防范“嗅探/sniffer”或“字典猜解攻击”或“重放攻击”。
 
 ### 量子密钥分发协议BB84
 
