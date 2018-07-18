@@ -35,3 +35,13 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 - Zookeeper端处理Outgoing Queue，并将该事件移到Pending Queue中 
 - Zookeeper端消费Pending Queue，并调用finishPacket(),生成Event 
 - EventThread线程消费Event事件,并且处理Watcher.
+
+
+使用场景：
+- 数据发布订阅-配置管理中心
+- 负载均衡
+- 命名服务 全局唯一ID机制
+- 分布式协调/通知
+- Master选举
+- 分布式锁
+- 分布式队列
