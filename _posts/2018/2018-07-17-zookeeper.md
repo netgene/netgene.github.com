@@ -20,6 +20,6 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 
 [https://zookeeper.apache.org/](https://zookeeper.apache.org/)  
 
-[https://www.cnblogs.com/felixzh/p/5869212.html](https://www.cnblogs.com/felixzh/p/5869212.html)  
-[https://www.cnblogs.com/sunddenly/p/4033574.html](https://www.cnblogs.com/sunddenly/p/4033574.html)  
-[https://blog.csdn.net/qiushisoftware/article/details/79043379](https://blog.csdn.net/qiushisoftware/article/details/79043379)  
+[Zookeeper的功能以及工作原理 https://www.cnblogs.com/felixzh/p/5869212.html](https://www.cnblogs.com/felixzh/p/5869212.html)  
+[Zookeeper简单介绍 https://www.cnblogs.com/sunddenly/p/4033574.html](https://www.cnblogs.com/sunddenly/p/4033574.html)  
+[Zookeeper简介与集群搭建 https://blog.csdn.net/qiushisoftware/article/details/79043379](https://blog.csdn.net/qiushisoftware/article/details/79043379)  
