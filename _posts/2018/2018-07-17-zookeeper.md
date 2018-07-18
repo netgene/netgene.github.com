@@ -6,7 +6,7 @@ categories:
 - opensource
 tags:
 ---
-ZooKeeper是一种集中式服务，用于维护配置信息，命名，提供分布式同步和提供组服务。所有这些类型的服务都以分布式应用程序的某种形式使用。  
+ZooKeeper是一种集中式服务，用于维护配置信息(configuration manegement)，命名(naming)，提供分布式同步(synchronization)和提供组服务(group service)。所有这些类型的服务都以分布式应用程序的某种形式使用。  
 
 Zookeeper是一个高效的分布式协调服务，可以提供配置信息管理、命名、分布式同步、集群管理、数据库切换等服务。它不适合用来存储大量信息，可以用来存储一些配置、发布与订阅等少量信息。Hadoop、Storm、消息中间件、RPC服务框架、分布式数据库同步系统，这些都是Zookeeper的应用场景。  
 
@@ -25,6 +25,7 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 [Zookeeper简介与集群搭建 https://blog.csdn.net/qiushisoftware/article/details/79043379](https://blog.csdn.net/qiushisoftware/article/details/79043379)  
 [Zookeeper应用场景 https://www.cnblogs.com/leesf456/p/6036548.html](https://www.cnblogs.com/leesf456/p/6036548.html)  
 [Zookeeper 客户端源码吐血总结 https://blog.csdn.net/cnh294141800/article/details/53039482](https://blog.csdn.net/cnh294141800/article/details/53039482)  
+[ZooKeeper实战应用之统一配置管理 https://www.cnblogs.com/yjmyzz/p/4604947.html](https://www.cnblogs.com/yjmyzz/p/4604947.html)  
 
 ![zookeeper](https://img-blog.csdn.net/20161104212932485)
 
