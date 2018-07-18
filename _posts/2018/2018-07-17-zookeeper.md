@@ -27,8 +27,8 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 ![zookeeper](https://img-blog.csdn.net/20161104212932485)
 
 上图就是对Zookeeper源码一个最好的解释:  
-	1.Client端发送Request(封装成Packet)请求到Zookeeper 
-	2.Zookeeper处理Request并将该请求放入Outgoing Queue(	顾名思义，外出队列，就是让Zookeeper服务器处理的队列)， 
-	3.Zookeeper端处理Outgoing Queue，并将该事件移到Pending Queue中 
-	4.Zookeeper端消费Pending Queue，并调用finishPacket(),生成Event 
-	5.EventThread线程消费Event事件,并且处理Watcher.
+- Client端发送Request(封装成Packet)请求到Zookeeper 
+- Zookeeper处理Request并将该请求放入Outgoing Queue(顾名思义，外出队列，就是让Zookeeper服务器处理的队列)， 
+- Zookeeper端处理Outgoing Queue，并将该事件移到Pending Queue中 
+- Zookeeper端消费Pending Queue，并调用finishPacket(),生成Event 
+- EventThread线程消费Event事件,并且处理Watcher.
