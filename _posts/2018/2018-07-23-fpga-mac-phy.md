@@ -13,6 +13,6 @@ zynq:Zynq®-7000 SoC 系列集成 ARM® 处理器的软件可编程性与 FPGA �
 [FPGA/CPLD论坛 http://bbs.21ic.com/iclist-119-1.html](http://bbs.21ic.com/iclist-119-1.html)  
 
 - ZYNQ:FPGA+ARM
-- FPGA
+- FPGA Verilog、VHDL硬件描述语言
 - 密码卡、密码芯片
 - PHY/MAC芯片
