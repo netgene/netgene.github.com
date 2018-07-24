@@ -26,6 +26,10 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 [Zookeeper应用场景 https://www.cnblogs.com/leesf456/p/6036548.html](https://www.cnblogs.com/leesf456/p/6036548.html)  
 [Zookeeper 客户端源码吐血总结 https://blog.csdn.net/cnh294141800/article/details/53039482](https://blog.csdn.net/cnh294141800/article/details/53039482)  
 [ZooKeeper实战应用之统一配置管理 https://www.cnblogs.com/yjmyzz/p/4604947.html](https://www.cnblogs.com/yjmyzz/p/4604947.html)  
+[zk系列-c++下zookeeper使用实例 https://blog.csdn.net/whuqin/article/details/8859987](https://blog.csdn.net/whuqin/article/details/8859987)  
+[Zookeeper C API学习总结 https://blog.csdn.net/yangzhen92/article/details/53248294](https://blog.csdn.net/yangzhen92/article/details/53248294)  
+[Zookeeper C API 指南四(C API 概览) http://www.cnblogs.com/haippy/archive/2013/02/21/2920426.html](http://www.cnblogs.com/haippy/archive/2013/02/21/2920426.html)  
+[zookeeper C API实例 https://blog.csdn.net/lpshoucsd1/article/details/8984762](https://blog.csdn.net/lpshoucsd1/article/details/8984762)  
 
 ![zookeeper](https://img-blog.csdn.net/20161104212932485)
 
@@ -35,7 +39,6 @@ Zookeeper使用的是ZAB原子消息广播协议，节点之间的一致性算�
 - Zookeeper端处理Outgoing Queue，并将该事件移到Pending Queue中 
 - Zookeeper端消费Pending Queue，并调用finishPacket(),生成Event 
 - EventThread线程消费Event事件,并且处理Watcher.
-
 
 使用场景：
 - 数据发布订阅-配置管理中心
