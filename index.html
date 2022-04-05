@@ -101,9 +101,9 @@ title: Home
         <li>
             {% endif %}
             {% if i == 1 %}
-            <a href="{{site.baseurl}}/">{{i}}</a>
+            <a href="{{site.baseurl}}/">{{paginator.page}}</a>
             {% else %}
-            <a href="{{site.baseurl}}/pages{{i}}">{{i}}</a>
+            <a href="{{site.baseurl}}/pages{{i}}">{{paginator.page}}</a>
             {% endif %}
         </li>
         {% endfor %}
