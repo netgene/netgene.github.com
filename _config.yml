@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Jun Wang's Blog
-author: Gavin
+author: 风再起时
 email: netgene@163.com
 description: > # this means to ignore newlines until "baseurl:"
   Just make it happen! 
