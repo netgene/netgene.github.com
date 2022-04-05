@@ -74,7 +74,7 @@ comments_provider: gitalk
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: netgene
-    repo: blog-comments
+    repo: netgene.github.io
     clientID: 09b6f38465cdea8d414a
     clientSecret: 9dbe7023e2fc6fd146ab23ad012656ae2e0ae458
 # 在使用其它评论组件时可点击显示 Disqus
