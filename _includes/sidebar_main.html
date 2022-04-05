@@ -65,26 +65,26 @@
   <nav class="category-list list-group">
     <h3 class="sidebar-title">Categories</h3>
     <ul class="list-group">
-        {% for post in site.posts %}
-          {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-          {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-          {% if month != nmonth %}
-            {% if forloop.index != 1 %}</li>{% endif %}
-            {{ post.date | date: '%Y-%m' }}<li class="list-group-item">
-          {% endif %}            
-        {% endfor %}
-    </ul>
-  </nav>
-
-  <nav class="category-list list-group">
-    <h3 class="sidebar-title">Categories</h3>
-    <ul class="list-group">
     {% for category in site.categories %}
       <li class="list-group-item">
         <a href="{{ site.baseurl }}/categories.html#{{ category[0] }}">{{ category[0] }}</a>
         <span class="badge">{{ category[1].size }}</span>
       </li>
     {% endfor %}
+    </ul>
+  </nav>
+
+  <nav class="category-list list-group">
+    <h3 class="sidebar-title">Archives</h3>
+    <ul class="list-group">
+        {% for post in site.posts %}
+          {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+          {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+          {% if month != nmonth %}            
+            <li class="list-group-item">{{ post.date | date: '%Y-%m' }}
+            {% if forloop.index != 1 %}</li>{% endif %}
+          {% endif %}            
+        {% endfor %}
     </ul>
   </nav>
 
