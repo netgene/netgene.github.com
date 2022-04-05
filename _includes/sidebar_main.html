@@ -81,8 +81,7 @@
           {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
           {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
           {% if month != nmonth %}            
-            <li class="list-group-item">{{ post.date | date: '%Y-%m' }}
-            {% if forloop.index != 1 %}<span class="badge">{{ forloop.index }}</span></li>{% endif %}
+            <li class="list-group-item">{{ post.date | date: '%Y-%m' }}<span class="badge">{{ forloop.index }}</span></li>
           {% endif %}            
         {% endfor %}
     </ul>
