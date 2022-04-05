@@ -91,6 +91,7 @@
             owner: '{{ site.gitalk.owner }}',
             admin: ['{{ site.gitalk.owner }}'],
             labels: ['gitment'],
+            proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
             perPage: 50,
         })
         gitalk.render('gitalk-container')
