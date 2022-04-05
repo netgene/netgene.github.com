@@ -77,11 +77,14 @@
   <nav class="category-list list-group">
     <h3 class="sidebar-title">Archives</h3>
     <ul class="list-group">
+        {% assign count = 0 %}
         {% for post in site.posts %}
           {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
           {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+          {% count++ %}
           {% if month != nmonth %}            
-            <li class="list-group-item">{{ post.date | date: '%Y-%m' }}<span class="badge">{{ forloop.counter }}</span></li>
+            <li class="list-group-item">{{ post.date | date: '%Y-%m' }}<span class="badge">{{ count }}</span></li>
+            {% counter = 0 %}
           {% endif %}            
         {% endfor %}
     </ul>
