@@ -23,8 +23,17 @@ title: Archives
 
       <div class="archive-posts-list">
         <ul class="posts-list">
-        {% for post in site.posts %}
+        <!--{% for post in site.posts %}
           <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small class="post-date">{{ post.date | date:"%Y-%m-%d" }}</small></a></li>
+        {% endfor %}-->
+        {% for post in site.posts %}
+          {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+          {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+          {% if month != nmonth %}
+            {% if forloop.index != 1 %}</ul>{% endif %}
+            <h3>{{ post.date | date: '%B %Y' }}</h3><ul>
+          {% endif %}
+            <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small class="post-date">{{ post.date | date:"%Y-%m-%d" }}</small></a></li>
         {% endfor %}
       </div>
     </div>
