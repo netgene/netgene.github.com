@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Just make it happen! 
 url: https://netgene.github.io # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-words: 以梦为马莫负韶华
+words: 风再起时
 
 # Markdown Processors
 markdown: kramdown
