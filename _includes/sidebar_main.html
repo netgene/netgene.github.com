@@ -79,12 +79,12 @@
     <ul class="list-group">
         {% assign count = 0 %}
         {% for post in site.posts %}
-          {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-          {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+          {% capture month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
+          {% capture nmonth %}{{ post.next.date | date: '%Y-%m' }}{% endcapture %}
           {% assign count = count | plus: 1 %}     
           <li>{{ post.date | date:"%Y-%m-%d" }}</li>
           {% if month != nmonth %}    
-            {% if forloop.index != 1 %}<li class="list-group-item">{{ month }}<span class="badge">{{ forloop.count }}</span></li>{% endif %}     
+            {% if forloop.index != 1 %}<li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>{% endif %}     
             {% assign count = 0 %}    
           {% endif %}   
               
