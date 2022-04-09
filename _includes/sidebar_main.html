@@ -81,7 +81,7 @@
         {% for post in site.posts %}
           {% capture month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
           {% capture nmonth %}{{ post.next.date | date: '%Y-%m' }}{% endcapture %}  
-          <li>{{ post.date | date:"%Y-%m-%d" }}</li>  
+          <li>{{ post.date | date:"%Y-%m-%d" }} {{month}} {{nmonth}}</li>  
           {% assign count = count | plus: 1 %}                  
           {% if month != nmonth %}    
             <li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>
