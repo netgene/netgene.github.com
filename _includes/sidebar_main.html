@@ -77,7 +77,7 @@
   <nav class="category-list list-group">
     <h3 class="sidebar-title">Archives</h3>
     <ul class="list-group">
-        {% assign count = 1 %}
+        {% assign count = 0 %}
         {% for post in site.posts %}
           {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
           {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
