@@ -82,8 +82,8 @@
           {% capture month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
           {% capture nmonth %}{{ post.next.date | date: '%Y-%m' }}{% endcapture %}
           {% assign count = count | plus: 1 %}     
-          {% if month != nmonth %}            
-            <li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>
+          {% if month != nmonth %}    
+            {% if forloop.index != 1 %}<li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>{% endif %}     
             {% assign count = 0 %}    
           {% endif %}   
               
