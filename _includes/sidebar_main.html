@@ -84,7 +84,7 @@
           {% assign count = count | plus: 1 %}     
           <li>{{ post.date | date:"%Y-%m-%d" }}</li>
           {% if month != nmonth %}    
-            {% if forloop.index != 1 %}<li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>{% endif %}     
+            <li class="list-group-item">{{ month }}<span class="badge">{{ count }}</span></li>     
             {% assign count = 0 %}    
           {% endif %}   
               
