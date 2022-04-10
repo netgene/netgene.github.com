@@ -30,15 +30,15 @@ title: Home
             </span>
           {% endif %}
         </div>
-      <!--
+     
         <div class="post-excerpt">
-          {{ post.excerpt }}
+          {{ post.excerpt | truncatewords:50 }}
         </div>
         
         <div class="post-readmore">
-          <a class="read-more" href="{{ post.url }}">阅读全文</a>
+          <a class="read-more" href="{{ post.url }}">阅读全文"{{post.title}}"</a>
         </div>
-     -->
+    
       </article>
 
       <hr />
