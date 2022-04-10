@@ -32,7 +32,7 @@ title: Home
         </div>
      
         <div class="post-excerpt">
-          {{ post.excerpt_or_content | strip_html  | truncatewords:20 }}
+          {{ post.excerpt | strip_html  | truncatewords:20 }}
         </div>
         
         <div class="post-readmore">
