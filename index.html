@@ -32,11 +32,11 @@ title: Home
         </div>
      
         <div class="post-excerpt">
-          {{ post.excerpt | strip_html  | truncatewords:20 }}
+          {{ post.excerpt | strip_html  | truncatewords:5 }}
         </div>
         
         <div class="post-readmore">
-          <a href="{{ post.url }}">阅读全文"{{post.title}}"</a>
+          <a href="{{ post.url }}">阅读全文"{{post.title}}>>"</a>
         </div>
     
       </article>
